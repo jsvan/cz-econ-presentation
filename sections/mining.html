@@ -1,12 +1,11 @@
 <!-- SLIDE: MINING -->
 <div class="slide-content">
     <div class="section-number">09</div>
-    <div class="section-label">Underground Heritage</div>
-    <h2>Mining: From Europe's Richest to Phase-Out <span class="gdp-tag">~1% of GDP</span></h2>
-    <p>Czechia was once Europe's silver heartland—<a href="https://www.britannica.com/place/Jachymov" class="src" target="_blank">Jáchymov (1516)</a> gave us the word "dollar." Today: <a href="https://euracoal.eu/info/country-profiles/czech-republic/" class="src" target="_blank">~30M tonnes coal/year</a>, phase-out by 2033. Ranks <a href="https://www.indexmundi.com/minerals/?product=kaolin&graph=production" class="src" target="_blank"><span class="highlight">4th globally in kaolin</span></a>. Future: <a href="https://www.europeanmet.com/cinovec-project-overview/" class="src" target="_blank">Cínovec</a> holds <span class="highlight-blue">Europe's largest lithium deposit</span>.</p>
-
+    <div class="section-label">Hledání Pokladu</div>
+    <h2>Minerály a Uhlí (Těžba)<span class="gdp-tag">1% GDP</span></h2>
+    <br/>
     <div class="chart-container">
-        <div class="chart-title">Mineral Production Trends: 1995–2023 (Million Tonnes) — <a href="https://www.ceicdata.com/en/indicator/czech-republic/coal-production" target="_blank" style="color: var(--accent-gold);">CEIC</a> / <a href="https://www.researchgate.net/publication/320211843" target="_blank" style="color: var(--accent-gold);">ResearchGate</a></div>
+        <div class="chart-title">Trend Produkce: 1995–2023 (Milion Tun) — <a href="https://www.ceicdata.com/en/indicator/czech-republic/coal-production" target="_blank" style="color: var(--accent-gold);">CEIC</a> / <a href="https://www.researchgate.net/publication/320211843" target="_blank" style="color: var(--accent-gold);">ResearchGate</a></div>
         <div class="chart-wrapper">
             <canvas id="mineralProductionChart"></canvas>
         </div>
@@ -14,13 +13,13 @@
 
     <div style="display: flex; gap: 1rem;">
         <div class="chart-container" style="flex: 1;">
-            <div class="chart-title">EU Coal Production 2023 (Million Tonnes) — <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics" target="_blank" style="color: var(--accent-gold);">Eurostat</a></div>
+            <div class="chart-title">Produkce uhlí v EU 2023 (Milion Tun) — <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Coal_production_and_consumption_statistics" target="_blank" style="color: var(--accent-gold);">Eurostat</a></div>
             <div class="chart-wrapper">
                 <canvas id="euCoalCompareChart"></canvas>
             </div>
         </div>
         <div class="chart-container" style="flex: 1;">
-            <div class="chart-title">Current & Planned Extraction (Million Tonnes) — <a href="https://euracoal.eu/info/country-profiles/czech-republic/" target="_blank" style="color: var(--accent-gold);">Euracoal</a></div>
+            <div class="chart-title">Současná a plánovaná výroba (Milion Tun) — <a href="https://euracoal.eu/info/country-profiles/czech-republic/" target="_blank" style="color: var(--accent-gold);">Euracoal</a></div>
             <div class="chart-wrapper">
                 <canvas id="extractionMixChart"></canvas>
             </div>
@@ -28,14 +27,14 @@
     </div>
 
     <div class="chart-container">
-        <div class="chart-title">Kaolin: World's Top Producers (Million Tonnes) — <a href="https://www.indexmundi.com/minerals/?product=kaolin&graph=production" target="_blank" style="color: var(--accent-gold);">Index Mundi</a></div>
+        <div class="chart-title">Kaolín (hlína): Největší světoví producenti (Milion Tun) — <a href="https://www.indexmundi.com/minerals/?product=kaolin&graph=production" target="_blank" style="color: var(--accent-gold);">Index Mundi</a></div>
         <div class="chart-wrapper" style="height: 160px;">
             <canvas id="kaolinRankChart"></canvas>
         </div>
     </div>
 
     <div class="map-container">
-        <div class="chart-title">Active Mining Regions (2024)</div>
+        <div class="chart-title">Aktivní těžební regiony (2024)</div>
         <svg viewBox="0 0 612.46 350.62" xmlns="http://www.w3.org/2000/svg">
             <!-- Czech Republic base map -->
             <image href="https://jsvan.github.io/cz-econ-presentation/czech-republic.svg" width="612.46" height="350.62"/>
@@ -75,41 +74,39 @@
 
             <!-- Cínovec labels -->
             <text x="152" y="28" fill="#06b6d4" font-size="10" text-anchor="middle" font-weight="bold">Cínovec</text>
-            <text x="152" y="68" fill="#0891b2" font-size="9" text-anchor="middle">LITHIUM 2026+</text>
+            <text x="152" y="68" fill="#0891b2" font-size="9" text-anchor="middle">Lithium 2026+</text>
 
             <!-- North Bohemian Basin labels -->
-            <text x="125" y="78" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">LIGNITE ~20M t/yr</text>
-            <text x="125" y="92" fill="#ccc" font-size="8" text-anchor="middle">Most, Chomutov, Teplice</text>
+            <text x="125" y="78" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Hnědé uhlí</text>
+            <text x="125" y="92" fill="#ccc" font-size="8" text-anchor="middle">Most, Chomutov</text>
 
             <!-- Sokolov Basin labels -->
             <text x="50" y="122" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">Sokolov</text>
-            <text x="50" y="142" fill="#ef4444" font-size="8" text-anchor="middle">~6M t/yr</text>
 
             <!-- Ostrava-Karviná labels -->
             <text x="558" y="154" fill="#3b82f6" font-size="10" text-anchor="middle" font-weight="bold">Ostrava-Karviná</text>
-            <text x="558" y="173" fill="#fff" font-size="9" text-anchor="middle">HARD COAL</text>
-            <text x="558" y="202" fill="#ccc" font-size="8" text-anchor="middle">~3M t/yr</text>
+            <text x="558" y="173" fill="#fff" font-size="9" text-anchor="middle">Černé uhlí</text>
 
             <!-- Plzeň labels -->
             <text x="116" y="169" fill="#c9a227" font-size="10" text-anchor="middle" font-weight="bold">Plzeň</text>
-            <text x="116" y="207" fill="#ccc" font-size="9" text-anchor="middle">KAOLIN</text>
+            <text x="116" y="207" fill="#ccc" font-size="9" text-anchor="middle">Kaolín (hlína)</text>
 
             <!-- Karlovy Vary labels -->
             <text x="51" y="105" fill="#c9a227" font-size="9" font-weight="bold">K. Vary</text>
 
             <!-- Český Krumlov labels -->
             <text x="202" y="300" fill="#16a34a" font-size="10" text-anchor="middle" font-weight="bold">Č. Krumlov</text>
-            <text x="202" y="334" fill="#ccc" font-size="9" text-anchor="middle">GRAPHITE</text>
+            <text x="202" y="334" fill="#ccc" font-size="9" text-anchor="middle">Grafit</text>
 
             <!-- Prague label -->
-            <text x="212" y="127" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Prague</text>
+            <text x="212" y="127" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Praha</text>
         </svg>
         <div class="map-legend">
-            <div class="legend-item"><div class="legend-dot" style="background: #06b6d4;"></div>Lithium (Cínovec) — <a href="https://www.europeanmet.com/cinovec-project-overview/" target="_blank" class="src">EU's largest deposit, production 2026+</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #ef4444;"></div>Lignite — <a href="https://euracoal.eu/info/country-profiles/czech-republic/" target="_blank" class="src">562M tonnes reserves, phase-out 2033</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #3b82f6;"></div>Hard Coal — Last deep mine in EU (outside Poland)</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div>Kaolin — <a href="https://www.researchgate.net/publication/320211843" target="_blank" class="src">3.8M t/yr, 4th globally</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Graphite — <a href="https://gokrumlov.com/explore-krumlov/review/370-culture/371-museums-and-galleries/2497-graphite-mine" target="_blank" class="src">Active since Celtic times</a></div>
+            <div class="legend-item"><div class="legend-dot" style="background: #06b6d4;"></div>Lithium</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #ef4444;"></div>Hnědé uhlí</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #3b82f6;"></div>Černé uhlí</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div>Kaolín (hlína)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Grafit — aktivní od keltských dob</div>
         </div>
     </div>
 
@@ -121,12 +118,12 @@
             <img src="https://jsvan.github.io/cz-econ-presentation/img/kaolinkakaznějov.jpg" alt="Kaznějov surface kaolin quarry" style="max-width: 100%; object-fit: contain; border-radius: 4px;">
         </div>
         <div class="data-card" style="margin: 0;">
-            <h4>Nevřeň Underground Mine</h4>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">One of Europe's few <strong>underground kaolin mines</strong>, operating since 1904 near Plzeň. The deposit sits 40–80m below surface, accessed via tunnels. Underground mining preserves the overlying farmland and produces higher-purity kaolin than surface quarries—prized for ceramics and paper coating.</p>
+            <h4>Nevřeň — podzemí</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Plzeň má kaolín (hlína) podzemí.</p>
         </div>
         <div class="data-card" style="margin: 0;">
-            <h4>Kaznějov Surface Quarry</h4>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">The largest <strong>open-pit kaolin operation</strong> in the Plzeň basin, extracting ~1M tonnes annually. The distinctive white terraces reveal layers of kaolinized granite. After extraction, the land is progressively reclaimed—some former pits now serve as lakes and nature reserves.</p>
+            <h4>Kaznějov — lom</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Plzeň má kaolín (hlína) taky nad zemí.</p>
         </div>
     </div>
 
@@ -138,35 +135,16 @@
             <img src="https://jsvan.github.io/cz-econ-presentation/img/okd.jpg" alt="OKD hard coal mine" style="max-width: 100%; object-fit: contain; border-radius: 4px;">
         </div>
         <div class="data-card" style="margin: 0;">
-            <h4>Severočeské Doly — Lignite</h4>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Czechia's largest mining company, owned by ČEZ, operating massive <strong>open-pit lignite mines</strong> in the North Bohemian Basin near Most and Chomutov. Giant bucket-wheel excavators strip away overburden to reach coal seams up to 30m thick. Produces ~20M tonnes annually, feeding nearby power plants. Phase-out by 2033.</p>
+            <h4>Severočeské doly — hnědé uhlí</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Produkce uhlí blízko Německa.</p>
         </div>
         <div class="data-card" style="margin: 0;">
-            <h4>OKD — Hard Coal</h4>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">The <strong>last deep hard coal mine</strong> in the EU outside Poland, operating in the Ostrava-Karviná basin since 1782. Miners descend 800–1200m underground to extract high-quality bituminous coal. Once employed 100,000+; now ~8,000 workers remain. Final closure expected by 2025.</p>
+            <h4>OKD — černé uhlí</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Poslední černé uhlí produkce, která není v Polsku, ale blízko Polska.</p>
         </div>
     </div>
 
-    <div class="data-grid">
-        <div class="data-card">
-            <h4>Major Mining Companies</h4>
-            <ul style="color: var(--text-secondary); padding-left: 1.5rem; font-size: 0.9rem;">
-                <li><strong>Severočeské doly</strong> (ČEZ) — Largest lignite producer</li>
-                <li><strong>Geomet</strong> (ČEZ) — Cínovec lithium project</li>
-                <li><strong>OKD</strong> — Only hard coal producer</li>
-                <li><strong>KOH-I-NOOR GRAFIT</strong> — Graphite (Netolice)</li>
-            </ul>
-        </div>
-        <div class="data-card">
-            <h4>The Transition</h4>
-            <ul style="color: var(--text-secondary); padding-left: 1.5rem; font-size: 0.9rem;">
-                <li>Coal phase-out: <span class="highlight-red">2033</span></li>
-                <li><a href="https://euracoal.eu/info/country-profiles/czech-republic/" class="src" target="_blank">~18,000 mining jobs</a> at risk</li>
-                <li>Cínovec lithium: <span class="highlight-green">EU strategic project</span></li>
-                <li>Kaolin/graphite: <span class="highlight-green">stable</span></li>
-            </ul>
-        </div>
-    </div>
+    
 </div>
 
 <script>
@@ -178,7 +156,7 @@ window.initChartsSlide7 = function() {
             labels: ['1995', '1998', '2001', '2004', '2007', '2010', '2013', '2016', '2019', '2022', '2023'],
             datasets: [
                 {
-                    label: 'Lignite',
+                    label: 'Hnědé uhlí',
                     data: [62, 52, 54, 52, 52, 46, 40, 38, 32, 28, 26],
                     borderColor: '#ef4444',
                     backgroundColor: 'rgba(239, 68, 68, 0.1)',
@@ -188,7 +166,7 @@ window.initChartsSlide7 = function() {
                     borderWidth: 3
                 },
                 {
-                    label: 'Hard Coal',
+                    label: 'Černé uhlí',
                     data: [12, 10, 9, 8, 7, 6, 5, 4, 3.5, 3, 2.5],
                     borderColor: '#3b82f6',
                     backgroundColor: 'transparent',
@@ -197,7 +175,7 @@ window.initChartsSlide7 = function() {
                     borderWidth: 2
                 },
                 {
-                    label: 'Kaolin',
+                    label: 'Kaolín (hlína)',
                     data: [3.2, 3.4, 3.5, 3.6, 3.8, 3.5, 3.6, 3.7, 3.8, 3.8, 3.8],
                     borderColor: '#c9a227',
                     backgroundColor: 'transparent',
@@ -206,7 +184,7 @@ window.initChartsSlide7 = function() {
                     borderWidth: 2
                 },
                 {
-                    label: 'Graphite',
+                    label: 'Grafit',
                     data: [0.025, 0.024, 0.022, 0.021, 0.020, 0.020, 0.020, 0.020, 0.020, 0.020, 0.020],
                     borderColor: '#16a34a',
                     backgroundColor: 'transparent',
@@ -230,7 +208,7 @@ window.initChartsSlide7 = function() {
                 y: {
                     type: 'linear',
                     position: 'left',
-                    title: { display: true, text: 'Million Tonnes', color: '#888' },
+                    title: { display: true, text: 'Milion Tun', color: '#888' },
                     grid: { color: '#1a1a1a' },
                     min: 0,
                     max: 70
@@ -244,16 +222,16 @@ window.initChartsSlide7 = function() {
     createChart('euCoalCompareChart', {
         type: 'bar',
         data: {
-            labels: ['Germany', 'Poland', 'Czechia', 'Bulgaria', 'Romania'],
+            labels: ['Německo', 'Polsko', 'Česko', 'Bulharsko', 'Rumunsko'],
             datasets: [
                 {
-                    label: 'Lignite',
+                    label: 'Hnědé uhlí',
                     data: [102, 52, 26, 26, 17],
                     backgroundColor: '#7f1d1d',
                     borderWidth: 0
                 },
                 {
-                    label: 'Hard Coal',
+                    label: 'Černé uhlí',
                     data: [0, 48, 3, 0, 0],
                     backgroundColor: '#3b82f6',
                     borderWidth: 0
@@ -274,7 +252,7 @@ window.initChartsSlide7 = function() {
             scales: {
                 x: {
                     stacked: true,
-                    title: { display: true, text: 'Million Tonnes', color: '#888' },
+                    title: { display: true, text: 'Milion Tun', color: '#888' },
                     grid: { color: '#1a1a1a' },
                     max: 120
                 },
@@ -290,16 +268,16 @@ window.initChartsSlide7 = function() {
     createChart('extractionMixChart', {
         type: 'bar',
         data: {
-            labels: ['Lignite', 'Kaolin', 'Hard Coal', 'Graphite', 'Lithium*'],
+            labels: ['Hnědé uhlí', 'Kaolín (hlína)', 'Černé uhlí', 'Grafit', 'Lithium*'],
             datasets: [{
-                label: 'Current Production',
+                label: 'Současná výroba',
                 data: [26, 3.8, 2.5, 0.02, 0],
                 backgroundColor: ['#7f1d1d', '#c9a227', '#3b82f6', '#16a34a', 'transparent'],
                 borderColor: ['#7f1d1d', '#c9a227', '#3b82f6', '#16a34a', '#06b6d4'],
                 borderWidth: [0, 0, 0, 0, 3]
             },
             {
-                label: 'Expected (2026+)',
+                label: 'Plánovaná (2026+)',
                 data: [0, 0, 0, 0, 0.025],
                 backgroundColor: 'transparent',
                 borderColor: '#06b6d4',
@@ -329,7 +307,7 @@ window.initChartsSlide7 = function() {
             scales: {
                 x: {
                     stacked: true,
-                    title: { display: true, text: 'Million Tonnes', color: '#888' },
+                    title: { display: true, text: 'Milion Tun', color: '#888' },
                     grid: { color: '#1a1a1a' },
                     type: 'logarithmic',
                     min: 0.01,
@@ -347,9 +325,9 @@ window.initChartsSlide7 = function() {
     createChart('kaolinRankChart', {
         type: 'bar',
         data: {
-            labels: ['USA', 'Uzbekistan', 'Czechia', 'Germany', 'Brazil', 'UK'],
+            labels: ['USA', 'Uzbekistán', 'Česko', 'Německo', 'Brazílie', 'UK'],
             datasets: [{
-                label: 'Million Tonnes',
+                label: 'Milion Tun',
                 data: [7.1, 5.5, 3.8, 3.8, 2.5, 1.8],
                 backgroundColor: [ChartColors.gray, ChartColors.gray, ChartColors.gold, ChartColors.gray, ChartColors.gray, ChartColors.gray],
                 borderWidth: 0
@@ -362,7 +340,7 @@ window.initChartsSlide7 = function() {
             plugins: { legend: { display: false } },
             scales: {
                 x: {
-                    title: { display: true, text: 'Million Tonnes/Year', color: '#888' },
+                    title: { display: true, text: 'Milion Tun/Rok', color: '#888' },
                     grid: { color: '#1a1a1a' },
                     max: 8
                 },

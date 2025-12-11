@@ -1,45 +1,40 @@
 <!-- SLIDE: ENERGY -->
 <div class="slide-content">
     <div class="section-number">04</div>
-    <div class="section-label">Energy & Climate</div>
-    <h2>Czech Energy Infrastructure</h2>
-
-    <h3>The Cost of Power</h3>
+    <div class="section-label">Nejen káva</div>
+    <h2>Česká Energetická Infrastruktura</h2>
+    <br/>
     <div style="display: flex; gap: 1rem;">
         <div class="chart-container" style="flex: 1;">
-            <div class="chart-title">Industrial Electricity Prices (EUR/kWh) — <a href="https://ec.europa.eu/eurostat/databrowser/view/ten00117/default/table" target="_blank" style="color: var(--accent-gold);">Eurostat</a></div>
+            <div class="chart-title">Kolik Stojí Energie? (EUR/kWh) — <a href="https://ec.europa.eu/eurostat/databrowser/view/ten00117/default/table" target="_blank" style="color: var(--accent-gold);">Eurostat</a></div>
             <div class="chart-wrapper">
                 <canvas id="energyPricesChart"></canvas>
             </div>
         </div>
         <div class="chart-container" style="flex: 1;">
-            <div class="chart-title">Electricity Consumption Per Capita (MWh/person) — <a href="https://ember-energy.org/latest-insights/european-electricity-review-2024/" target="_blank" style="color: var(--accent-gold);">Ember</a></div>
+            <div class="chart-title">Kolik Energie Člověk Potřebuje (MWh/osobu) — <a href="https://ember-energy.org/latest-insights/european-electricity-review-2024/" target="_blank" style="color: var(--accent-gold);">Ember</a></div>
             <div class="chart-wrapper">
                 <canvas id="energyConsumptionChart"></canvas>
             </div>
         </div>
     </div>
-
-    <h3>Power Generation Mix (2024)</h3>
-    <p>The three countries have radically different energy strategies. Germany bet on <a href="https://www.ise.fraunhofer.de/en/press-media/press-releases/2025/public-electricity-generation-2024-renewable-energies-cover-more-than-60-percent-of-german-electricity-consumption-for-the-first-time.html" class="src" target="_blank">renewables (56%)</a> but shut down nuclear. Czechia relies on <a href="https://lowcarbonpower.org/region/Czechia" class="src" target="_blank">nuclear (41%)</a> as its low-carbon backbone. Poland remains <a href="https://lowcarbonpower.org/region/Poland" class="src" target="_blank">Europe's coal holdout (52%)</a> but is rapidly adding solar.</p>
-
     <div class="chart-container">
-        <div class="chart-title">Electricity Generation Mix 2024 (%) — <a href="https://lowcarbonpower.org" target="_blank" style="color: var(--accent-gold);">Low Carbon Power</a></div>
+        <div class="chart-title">Zdroje Energie 2024 (%) — <a href="https://lowcarbonpower.org" target="_blank" style="color: var(--accent-gold);">Zelená Energie</a></div>
         <div style="display: flex; justify-content: space-around; align-items: flex-start; gap: 1rem; padding: 1rem 0;">
             <div style="text-align: center; flex: 1;">
-                <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-gold);">Germany</div>
+                <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-gold);">Německo</div>
                 <div style="height: 200px; position: relative;">
                     <canvas id="energyMixGermany"></canvas>
                 </div>
             </div>
             <div style="text-align: center; flex: 1;">
-                <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-blue);">Czech Republic</div>
+                <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-blue);">Česko</div>
                 <div style="height: 200px; position: relative;">
                     <canvas id="energyMixCzechia"></canvas>
                 </div>
             </div>
             <div style="text-align: center; flex: 1;">
-                <div style="font-weight: 600; margin-bottom: 0.5rem; color: #c75050;">Poland</div>
+                <div style="font-weight: 600; margin-bottom: 0.5rem; color: #c75050;">Polsko</div>
                 <div style="height: 200px; position: relative;">
                     <canvas id="energyMixPoland"></canvas>
                 </div>
@@ -48,17 +43,16 @@
         <div style="display: flex; justify-content: center; gap: 3rem; margin-top: 0.5rem; font-size: 0.9rem;">
             <div style="display: flex; align-items: center; gap: 0.5rem;">
                 <span style="display: inline-block; width: 14px; height: 14px; background: linear-gradient(135deg, #7f1d1d, #991b1b); border-radius: 3px;"></span>
-                <span style="color: var(--text-secondary);">Fossil Fuels</span>
+                <span style="color: var(--text-secondary);">Fosilní paliva</span>
             </div>
             <div style="display: flex; align-items: center; gap: 0.5rem;">
                 <span style="display: inline-block; width: 14px; height: 14px; background: linear-gradient(135deg, #3b82f6, #6fb3fc); border-radius: 3px;"></span>
-                <span style="color: var(--text-secondary);">Low-Carbon</span>
+                <span style="color: var(--text-secondary);">Nízkouhlíková</span>
             </div>
         </div>
     </div>
-
     <div class="map-container">
-        <div class="chart-title">Power Generation Facilities — <a href="https://www.cez.cz/en/energy-generation" target="_blank" style="color: var(--accent-gold);">ČEZ</a></div>
+        <div class="chart-title">Energetické továrny — <a href="https://www.cez.cz/en/energy-generation" target="_blank" style="color: var(--accent-gold);">ČEZ</a></div>
         <svg viewBox="0 0 612.46 350.62" xmlns="http://www.w3.org/2000/svg">
             <!-- Czech Republic base map -->
             <image href="https://jsvan.github.io/cz-econ-presentation/czech-republic.svg" width="612.46" height="350.62"/>
@@ -135,7 +129,7 @@
             <!-- ALL TEXT LAST (renders on top of shapes) -->
 
             <!-- Coal plant labels -->
-            <text x="125" y="68" fill="#ef4444" font-size="10" text-anchor="middle" font-weight="bold">Coal Plants</text>
+            <text x="125" y="68" fill="#ef4444" font-size="10" text-anchor="middle" font-weight="bold">Uhelné elektrárny</text>
             <text x="125" y="82" fill="#fff" font-size="8" text-anchor="middle">Prunéřov, Tušimice</text>
             <text x="125" y="94" fill="#fff" font-size="8" text-anchor="middle">Počerady, Ledvice</text>
             <text x="50" y="140" fill="#fff" font-size="8" text-anchor="middle">Tisová</text>
@@ -156,7 +150,7 @@
             <text x="160" y="260" fill="#fff" font-size="8" text-anchor="end">Orlík</text>
             <text x="180" y="203" fill="#fff" font-size="7" text-anchor="end">Slapy</text>
             <text x="228" y="163" fill="#3b82f6" font-size="8" font-weight="bold">Vltava</text>
-            <text x="228" y="173" fill="#3b82f6" font-size="8" font-weight="bold">Cascade</text>
+            <text x="228" y="173" fill="#3b82f6" font-size="8" font-weight="bold">kaskáda</text>
 
             <!-- Wind labels -->
             <text x="90" y="45" fill="#fff" font-size="9" text-anchor="middle">Kryštofovy H.</text>
@@ -166,14 +160,14 @@
             <text x="250" y="93" fill="#eab308" font-size="8" text-anchor="middle">56 MW solar</text>
 
             <!-- City labels -->
-            <text x="212" y="127" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Prague</text>
+            <text x="212" y="127" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Praha</text>
         </svg>
         <div class="map-legend" style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;">
-            <div class="legend-item"><div class="legend-dot" style="background: #10b981;"></div>Nuclear — <a href="https://www.cez.cz/en/energy-generation/nuclear-power-plants" class="src" target="_blank">41% of electricity, 4000 MW</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #7f1d1d;"></div>Coal — <a href="https://lowcarbonpower.org/region/Czechia" class="src" target="_blank">34% of electricity, phase-out 2033</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #3b82f6;"></div>Hydro — <a href="https://www.cez.cz/en/energy-generation/hydroelectric-power-plants" class="src" target="_blank">Pumped storage + Vltava cascade</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #eab308;"></div>Solar — 7% and growing</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #a855f7;"></div>Wind — ~1% (limited terrain)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #10b981;"></div>Jaderná — 41%</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #7f1d1d;"></div>Uhlí — 34%</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #3b82f6;"></div>Voda — Dlouhé Stráně a Vltava kaskáda</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #eab308;"></div>Slunce — 7%</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #a855f7;"></div>Vítr — ~1%</div>
         </div>
     </div>
 
@@ -186,19 +180,14 @@
         </div>
         <div class="data-card" style="margin: 0;">
             <h4>Dlouhé Stráně</h4>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Czechia's engineering marvel: <strong>Europe's largest reversible turbine</strong> (325 MW each, 2 units). Water drops <strong>510m</strong>—the highest head in the country. Built inside a mountain in Moravia. Can go from zero to full power in <strong>100 seconds</strong>, acting as a giant battery for grid stabilization. Listed among the <a href="https://www.cez.cz/en/energy-generation/hydroelectric-power-plants/cez-hydroelectric-power-plants/czech-republic/dlouhe-strane" class="src" target="_blank">"7 Wonders of Czechia"</a>.</p>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Gigantická baterie postavená uvnitř hory se dvěma jezery.</p>
         </div>
         <div class="data-card" style="margin: 0;">
-            <h4>The Vltava Cascade</h4>
-            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">A chain of <strong>9 dams</strong> built 1930s–1990s along the Vltava River from South Bohemia to Prague. Includes <a href="https://www.cez.cz/en/energy-generation/hydroelectric-power-plants" class="src" target="_blank">Lipno</a> (largest Czech reservoir), <strong>Orlík</strong> (deepest dam, 91m), and Slapy. Total ~750 MW capacity. Primary purpose: flood control for Prague—but also generates ~3% of Czech electricity.</p>
+            <h4>Vltava kaskáda</h4>
+            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 0.5rem;">Devět přehrad na Vltavě až do Prahy — vyrábí 3 % elektřiny v Česku.</p>
         </div>
     </div>
 
-    <div class="industry-highlight">
-        <h3>Climate vs. Competitiveness</h3>
-        <p style="margin-bottom: 0.5rem;">The EU's carbon border tax (CBAM) and emissions trading are squeezing coal-dependent economies. But Germany's high energy prices are also driving industry abroad—<a href="https://www.reuters.com/business/energy/german-industry-sounds-alarm-high-energy-costs-2024-01-15/" class="src" target="_blank">BASF and others are shifting production to the US and China</a> where power is cheaper.</p>
-        <p style="margin-bottom: 0;"><strong>The dilemma:</strong> Decarbonize too slowly and face carbon taxes; decarbonize too fast and lose industry to cheaper regions.</p>
-    </div>
 </div>
 
 <script>
@@ -213,7 +202,7 @@ window.initChartsSlide4 = function() {
             labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
             datasets: [
                 {
-                    label: 'Germany',
+                    label: 'Německo',
                     data: [0.15, 0.15, 0.15, 0.16, 0.16, 0.16, 0.18, 0.25, 0.32, 0.28],
                     borderColor: ChartColors.gold,
                     backgroundColor: 'transparent',
@@ -223,7 +212,7 @@ window.initChartsSlide4 = function() {
                     borderWidth: 2
                 },
                 {
-                    label: 'Czech Republic',
+                    label: 'Česko',
                     data: [0.08, 0.08, 0.07, 0.08, 0.09, 0.09, 0.11, 0.18, 0.22, 0.19],
                     borderColor: ChartColors.blue,
                     backgroundColor: 'transparent',
@@ -233,7 +222,7 @@ window.initChartsSlide4 = function() {
                     borderWidth: 3
                 },
                 {
-                    label: 'Poland',
+                    label: 'Polsko',
                     data: [0.09, 0.09, 0.09, 0.10, 0.10, 0.10, 0.12, 0.14, 0.17, 0.18],
                     borderColor: polandRed,
                     backgroundColor: 'transparent',
@@ -256,7 +245,7 @@ window.initChartsSlide4 = function() {
             },
             scales: {
                 y: {
-                    title: { display: true, text: 'EUR per kWh' },
+                    title: { display: true, text: 'EUR/kWh' },
                     grid: { color: '#1a1a1a' },
                     min: 0,
                     max: 0.35
@@ -275,7 +264,7 @@ window.initChartsSlide4 = function() {
             labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
             datasets: [
                 {
-                    label: 'Germany',
+                    label: 'Německo',
                     // 600/84=7.1, 595/84=7.1, 590/84=7.0, 580/84=6.9, 570/84=6.8, 550/84=6.5, 560/84=6.7, 540/84=6.4, 515/84=6.1, 510/84=6.1
                     data: [7.1, 7.1, 7.0, 6.9, 6.8, 6.5, 6.7, 6.4, 6.1, 6.1],
                     borderColor: ChartColors.gold,
@@ -286,7 +275,7 @@ window.initChartsSlide4 = function() {
                     borderWidth: 2
                 },
                 {
-                    label: 'Czech Republic',
+                    label: 'Česko',
                     // 62/10.5=5.9, 61/10.5=5.8, 62/10.5=5.9, 63/10.5=6.0, 62/10.5=5.9, 58/10.5=5.5, 60/10.5=5.7, 60/10.5=5.7, 59/10.5=5.6, 60/10.5=5.7
                     data: [5.9, 5.8, 5.9, 6.0, 5.9, 5.5, 5.7, 5.7, 5.6, 5.7],
                     borderColor: ChartColors.blue,
@@ -297,7 +286,7 @@ window.initChartsSlide4 = function() {
                     borderWidth: 3
                 },
                 {
-                    label: 'Poland',
+                    label: 'Polsko',
                     // 150/38=3.9, 152/38=4.0, 156/38=4.1, 160/38=4.2, 158/38=4.2, 155/38=4.1, 165/38=4.3, 168/38=4.4, 170/38=4.5, 171/38=4.5
                     data: [3.9, 4.0, 4.1, 4.2, 4.2, 4.1, 4.3, 4.4, 4.5, 4.5],
                     borderColor: polandRed,
@@ -321,7 +310,7 @@ window.initChartsSlide4 = function() {
             },
             scales: {
                 y: {
-                    title: { display: true, text: 'MWh per person' },
+                    title: { display: true, text: 'MWh/osobu' },
                     grid: { color: '#1a1a1a' },
                     min: 0,
                     max: 8
@@ -384,7 +373,7 @@ window.initChartsSlide4 = function() {
     const czechiaData = [34, 5, 41, 1, 7, 10];
     const polandData = [52, 13, 0, 16, 12, 5];
 
-    const pieLabels = ['Coal', 'Gas', 'Nuclear', 'Wind', 'Solar', 'Hydro/Bio'];
+    const pieLabels = ['Uhlí', 'Plyn', 'Jaderná', 'Vítr', 'Slunce', 'Voda'];
     const pieColors = [
         fossilColors.coal, fossilColors.gas,
         lowCarbonColors.nuclear, lowCarbonColors.wind,

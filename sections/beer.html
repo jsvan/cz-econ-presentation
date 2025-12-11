@@ -1,36 +1,34 @@
-<!-- SLIDE 4: BEER -->
 <div class="slide-content">
     <div class="section-number">05</div>
-    <div class="section-label">Liquid Culture</div>
-    <h2>Beer: #1 in the World Since 1993 <span class="gdp-tag">~0.5% of GDP*</span></h2>
-    <p>Czechs drink <a href="https://vinepair.com/articles/czech-republic-beer-consumption-declining/" class="src" target="_blank"><span class="highlight">126 liters of beer per person per year</span></a>—more than any nation on Earth (~1 pint/day for every adult). Production hit a <a href="https://praguemorning.cz/beer-czech-republic-growth/" class="src" target="_blank">15-year high of 20.9M hectoliters</a> in 2024, with <a href="https://www.czechtradeoffices.com/in/news/czech-beer-exports-set-a-record-in-2024" class="src" target="_blank">record exports of 5.9M hectoliters</a>. The industry has exploded from ~50 breweries in 1990 to <a href="https://en.wikipedia.org/wiki/Beer_in_the_Czech_Republic" class="src" target="_blank">~550 today</a>.</p>
-
+    <div class="section-label">naše kultura</div>
+    <h2>Pivo: mistr světa číslo 1<span class="gdp-tag">0.5% GDP*</span></h2>
+    <br/>
     <div class="chart-container">
-        <div class="chart-title">Beer Consumption Per Capita: Czechia vs. Neighbors (Liters/Year) — <a href="https://www.kirinholdings.com/en/newsroom/release/2024/1219_01.html" target="_blank" style="color: var(--accent-gold);">Kirin Holdings 2023</a></div>
+        <div class="chart-title">Pivo na osobu a rok: (litrů za rok) — <a href="https://www.kirinholdings.com/en/newsroom/release/2024/1219_01.html" target="_blank" style="color: var(--accent-gold);">Kirin Holdings 2023</a></div>
         <div class="chart-wrapper">
             <canvas id="beerConsumptionChart"></canvas>
         </div>
     </div>
 
-    <h3>Market Share & Consumption Patterns (2024)</h3>
+    <div class="chart-title">Jak Nakupují Češi (2024)</div>
 
     <div style="display: flex; justify-content: space-around; align-items: flex-start; gap: 1rem; padding: 1rem 0;">
         <div style="text-align: center; flex: 1.5;">
-            <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-gold);">Market Share by Brewing Group</div>
+            <div class="chart-title">Největší značky</div>
             <div style="height: 220px; position: relative;">
                 <canvas id="beerMarketShareChart"></canvas>
             </div>
             <div style="font-size: 0.7rem; color: #666; margin-top: 0.25rem;"><a href="https://www.praguedaily.news/2025/03/11/plzensky-prazdroj-keeps-domestic-sales-stable-in-2024-lager-and-non-alcoholic-beer-on-trend/" target="_blank" class="src">Prague Daily News 2025</a></div>
         </div>
         <div style="text-align: center; flex: 1;">
-            <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-blue);">Beer Origin</div>
+            <div class="chart-title">Odkud je pivo</div>
             <div style="height: 220px; position: relative;">
                 <canvas id="beerDomesticChart"></canvas>
             </div>
             <div style="font-size: 0.7rem; color: #666; margin-top: 0.25rem;"><a href="https://brauwelt.com/en/international-report/europe-russia/648174-czech-beer-exports-rise-while-domestic-consumption-declines" target="_blank" class="src">Brauwelt 2024</a></div>
         </div>
         <div style="text-align: center; flex: 1;">
-            <div style="font-weight: 600; margin-bottom: 0.5rem; color: var(--accent-green);">Where It's Bought</div>
+            <div class="chart-title">Kde se pivo kupuje</div>
             <div style="height: 220px; position: relative;">
                 <canvas id="beerPurchaseChart"></canvas>
             </div>
@@ -39,7 +37,7 @@
     </div>
 
     <div class="map-container">
-        <div class="chart-title">Major Brewery Locations</div>
+        <div class="chart-title">Kde Jsou Hlavní Pivovary?</div>
         <svg viewBox="0 0 612.46 350.62" xmlns="http://www.w3.org/2000/svg">
             <image href="https://jsvan.github.io/cz-econ-presentation/czech-republic.svg" width="612.46" height="350.62"/>
 
@@ -120,11 +118,19 @@
             <text x="216" y="320" fill="#888" font-size="8" text-anchor="middle">State-owned</text>
         </svg>
         <div class="map-legend">
-            <div class="legend-item"><div class="legend-dot" style="background: #2563eb;"></div>Plzeňský Prazdroj (Asahi) — <a href="https://www.praguedaily.news/2025/03/11/plzensky-prazdroj-keeps-domestic-sales-stable-in-2024-lager-and-non-alcoholic-beer-on-trend/" target="_blank" class="src">46% share, 3 breweries</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #dc2626;"></div>Pivovary Staropramen (Molson Coors) — <a href="https://pivovary-staropramen.cz/en/breweries/" target="_blank" class="src">16% share, 2 breweries</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Heineken Czechia — <a href="https://www.heinekenceskarepublika.cz/en/" target="_blank" class="src">12% share, 3 breweries</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div>Budějovický Budvar (State-owned) — <a href="https://www.budejovickybudvar.cz/en/brewery" target="_blank" class="src">10% share, only major Czech-owned</a></div>
+            <div class="legend-item"><div class="legend-dot" style="background: #2563eb;"></div>Plzeňský Prazdroj (Asahi) — <a href="https://www.praguedaily.news/2025/03/11/plzensky-prazdroj-keeps-domestic-sales-stable-in-2024-lager-and-non-alcoholic-beer-on-trend/" target="_blank" class="src">46% všech, 3 pivovary</a></div>
+            <div class="legend-item"><div class="legend-dot" style="background: #dc2626;"></div>Pivovary Staropramen (Molson Coors) — <a href="https://pivovary-staropramen.cz/en/breweries/" target="_blank" class="src">16% všech, 2 pivovary</a></div>
+            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Heineken Czechia — <a href="https://www.heinekenceskarepublika.cz/en/" target="_blank" class="src">12% všech, 3 pivovary</a></div>
+            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div>Budějovický Budvar (vládní pivo) — <a href="https://www.budejovickybudvar.cz/en/brewery" target="_blank" class="src">10% všech</a></div>
         </div>
+    </div>
+
+    <div class="chart-title">Hlavní značky podle skupiny</div>
+    <div style="font-size: 0.85rem; color: #ccc; line-height: 1.6;">
+        <div><span style="color: #60a5fa; font-weight: 600;">Prazdroj:</span> Gambrinus, Pilsner Urquell, Kozel, Radegast, Birell</div>
+        <div><span style="color: #f87171; font-weight: 600;">Staropramen:</span> Staropramen, Ostravar, Braník</div>
+        <div><span style="color: #4ade80; font-weight: 600;">Heineken:</span> Krušovice, Starobrno, Zlatopramen</div>
+        <div><span style="color: #fbbf24; font-weight: 600;">Budvar:</span> Budweiser Budvar</div>
     </div>
 </div>
 
@@ -133,9 +139,9 @@ window.initChartsSlide5 = function() {
     createChart('beerConsumptionChart', {
         type: 'bar',
         data: {
-            labels: ['Czechia', 'Austria', 'Germany', 'Poland', 'Ireland', 'UK', 'France'],
+            labels: ['Česko', 'Rakousko', 'Německo', 'Polsko', 'Irsko', 'UK', 'Francie'],
             datasets: [{
-                label: 'Liters per capita (2023)',
+                label: 'Litrů na osobu (2023)',
                 data: [128, 106, 99, 97, 84, 67, 33],
                 backgroundColor: [ChartColors.gold, ChartColors.gray, ChartColors.gray, ChartColors.gray, ChartColors.gray, ChartColors.gray, ChartColors.gray],
                 borderColor: [ChartColors.gold, '#666', '#666', '#666', '#666', '#666', '#666'],
@@ -148,7 +154,7 @@ window.initChartsSlide5 = function() {
             indexAxis: 'y',
             plugins: { legend: { display: false } },
             scales: {
-                x: { title: { display: true, text: 'Liters per capita' }, grid: { color: '#1a1a1a' } },
+                x: { title: { display: true, text: 'Litrů' }, grid: { color: '#1a1a1a' } },
                 y: { grid: { display: false } }
             }
         }
@@ -209,7 +215,7 @@ window.initChartsSlide5 = function() {
             labels: ['Prazdroj', 'Staropramen', 'Heineken', 'Budvar', 'Craft/Other'],
             datasets: [{
                 data: [46, 16, 12, 10, 16],
-                backgroundColor: ['#2563eb', '#dc2626', '#16a34a', '#c9a227', '#6b7280'],
+                backgroundColor: ['#2563eb', '#c75050', '#16a34a', '#c9a227', '#6b7280'],
                 borderColor: '#0a0a0a',
                 borderWidth: 2
             }]
@@ -219,10 +225,61 @@ window.initChartsSlide5 = function() {
     });
 
     // Beer origin pie chart - blue domestic, red imported
+    // Custom plugin - puts small slice label in top-right of chart area
+    const domesticPieLabelsPlugin = {
+        id: 'domesticPieLabels',
+        afterDraw: (chart) => {
+            const ctx = chart.ctx;
+            const meta = chart.getDatasetMeta(0);
+
+            meta.data.forEach((arc, index) => {
+                const data = chart.data.datasets[0].data[index];
+                const label = chart.data.labels[index];
+                const centerAngle = (arc.startAngle + arc.endAngle) / 2;
+
+                const isSmall = data < 10;
+
+                if (isSmall) {
+                    // Place label on top-right of pie chart itself
+                    ctx.save();
+                    ctx.fillStyle = '#fff';
+                    ctx.font = 'bold 11px Source Sans 3, sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.shadowColor = 'rgba(0,0,0,0.8)';
+                    ctx.shadowBlur = 3;
+                    // Position with center near the pie centerline
+                    const x = arc.x + 35;
+                    const y = arc.y - arc.outerRadius * 0.5;
+                    ctx.fillText(label, x, y - 6);
+                    ctx.font = '10px Source Sans 3, sans-serif';
+                    ctx.fillText(data + '%', x, y + 6);
+                    ctx.restore();
+                } else {
+                    const radius = (arc.innerRadius + arc.outerRadius) / 2 * 1.05;
+                    const x = arc.x + Math.cos(centerAngle) * radius;
+                    const y = arc.y + Math.sin(centerAngle) * radius;
+
+                    ctx.save();
+                    ctx.fillStyle = '#fff';
+                    ctx.font = 'bold 11px Source Sans 3, sans-serif';
+                    ctx.textAlign = 'center';
+                    ctx.textBaseline = 'middle';
+                    ctx.shadowColor = 'rgba(0,0,0,0.8)';
+                    ctx.shadowBlur = 3;
+                    ctx.fillText(label, x, y - 6);
+                    ctx.font = '10px Source Sans 3, sans-serif';
+                    ctx.fillText(data + '%', x, y + 6);
+                    ctx.restore();
+                }
+            });
+        }
+    };
+
     createChart('beerDomesticChart', {
         type: 'pie',
         data: {
-            labels: ['Domestic', 'Imported'],
+            labels: ['Z Česka', 'Ze zahraničí'],
             datasets: [{
                 data: [97, 3],
                 backgroundColor: [ChartColors.blue, '#c75050'],
@@ -230,7 +287,7 @@ window.initChartsSlide5 = function() {
                 borderWidth: 2
             }]
         },
-        plugins: [beerPieLabelsPlugin],
+        plugins: [domesticPieLabelsPlugin],
         options: pieOptions
     });
 
@@ -238,7 +295,7 @@ window.initChartsSlide5 = function() {
     createChart('beerPurchaseChart', {
         type: 'pie',
         data: {
-            labels: ['Stores', 'Pubs'],
+            labels: ['Obchody', 'Hospody'],
             datasets: [{
                 data: [75, 25],
                 backgroundColor: [ChartColors.green, '#065f46'],

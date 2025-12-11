@@ -1,75 +1,24 @@
 <!-- SLIDE 2: HIGH-TECH -->
 <div class="slide-content">
     <div class="section-number">02</div>
-    <div class="section-label">The New Engine</div>
-    <h2>High-Tech: Outpacing Western Europe <span class="gdp-tag blue">~5% of GDP</span></h2>
-    <p>While traditional manufacturing struggles, Czech high-tech is booming. <a href="https://www.wipo.int/en/web/global-innovation-index/w/blogs/2025/high-tech-exports" class="src" target="_blank">High-tech exports grew <span class="highlight">13.4% to $51.9 billion</span> in 2024</a>—outperforming Germany (-10.6%) and France (-1.7%). The sector now accounts for <a href="https://tradingeconomics.com/czech-republic/high-technology-exports-percent-of-manufactured-exports-wb-data.html" class="src" target="_blank"><span class="highlight">22.4% of all manufactured exports</span></a>. Czech startups contribute <a href="https://tech.eu/2025/04/10/czech-republic-from-steady-roots-to-dynamic-growth/" class="src" target="_blank">over 5% to GDP</a> and employ <span class="highlight-blue">150,000+ people</span>. The country ranks <a href="https://www.wipo.int/gii-ranking/en/czech-republic" class="src" target="_blank"><span class="highlight">30th globally</span></a> in the 2024 Global Innovation Index.</p>
-
+    <div class="section-label">Zajímavý</div>
+    <h2>High-tech, Vysoký Růst<span class="gdp-tag blue">5% of GDP</span></h2>
+    <br/>
     <div class="chart-container">
-        <div class="chart-title">High-Tech Exports by Country ($ Billions, log scale) — <a href="https://data.worldbank.org/indicator/TX.VAL.TECH.CD" target="_blank" style="color: var(--accent-gold);">World Bank</a></div>
+        <div class="chart-title">High-Tech export (Miliardy $) — <a href="https://data.worldbank.org/indicator/TX.VAL.TECH.CD" target="_blank" style="color: var(--accent-gold);">World Bank</a></div>
         <div class="chart-wrapper">
             <canvas id="hightechExportsChart"></canvas>
         </div>
     </div>
 
     <div class="chart-container">
-        <div class="chart-title">High-Tech Export Value 2015–2024: Czech Republic vs. Western Europe (Indexed, 2015=100) — <a href="https://data.worldbank.org/indicator/TX.VAL.TECH.CD" target="_blank" style="color: var(--accent-gold);">World Bank</a> / <a href="https://www.wipo.int/en/web/global-innovation-index/w/blogs/2025/high-tech-exports" target="_blank" style="color: var(--accent-gold);">WIPO</a></div>
+        <div class="chart-title">Růst High-Tech exportu 2015–2024 (Index, 2015=100) — <a href="https://data.worldbank.org/indicator/TX.VAL.TECH.CD" target="_blank" style="color: var(--accent-gold);">World Bank</a> / <a href="https://www.wipo.int/en/web/global-innovation-index/w/blogs/2025/high-tech-exports" target="_blank" style="color: var(--accent-gold);">WIPO</a></div>
         <div class="chart-wrapper">
             <canvas id="hightechGrowthChart"></canvas>
         </div>
     </div>
-
-    <h3>What Czechia Exports</h3>
-    <p>The top high-tech export is <a href="https://www.wipo.int/en/web/global-innovation-index/w/blogs/2025/high-tech-exports" class="src" target="_blank"><span class="highlight-blue">smartphones at $12.7 billion</span></a> (+18.4% YoY)—largely assembled by Foxconn. Electrical machinery & equipment totals <a href="https://tradingeconomics.com/czech-republic/exports/electrical-electronic-equipment" class="src" target="_blank">$53.5 billion</a> (20.6% of all exports). The $51.9B "high-tech" figure is a cross-cutting metric spanning multiple categories below.</p>
-
-    <div class="chart-container">
-        <div class="chart-title">Top Export Categories by HS Code ($ Billions, 2024) — <a href="https://www.worldstopexports.com/czech-republic-top-10-exports/" target="_blank" style="color: var(--accent-gold);">World's Top Exports</a></div>
-        <div class="chart-wrapper">
-            <canvas id="exportCategoriesChart"></canvas>
-        </div>
-        <p style="font-size: 0.75rem; color: var(--text-muted); margin-top: 0.5rem;">Blue = tech-intensive categories (source of $51.9B high-tech exports figure) · Gold = vehicles · Gray = traditional</p>
-    </div>
-
-    <h3>The Factories: Foxconn & Electronics Manufacturing</h3>
-    <p><a href="https://www.foxconn.cz/foxconn-czech-republic" class="src" target="_blank">Foxconn</a>, Taiwan's electronics giant, has been in Czechia for 25 years. It's the <a href="http://www.foxconnnwe.com/blog/foxconn-is-in-the-top-five-largest-companies-in-the-czech-republic-and-a-sovereign-leader-in-the-pardubice-region/" class="src" target="_blank"><span class="highlight">3rd largest exporter</span></a> in the country, generating <a href="https://www.zoominfo.com/c/foxconn-czech-republic/477992816" class="src" target="_blank"><span class="highlight">$7 billion in annual revenue</span></a> with ~5,000 employees. Their Pardubice plant produces computers, monitors, and medical devices; the Kutná Hora facility makes servers and network equipment.</p>
-
-    <h3>Czech Unicorns (Valuation $1B+)</h3>
-    <p>The Czech Republic has produced <a href="https://techround.co.uk/startups/top-unicorns-in-the-czech-republic/" class="src" target="_blank"><span class="highlight">6 unicorn startups</span></a>—companies valued at over $1 billion. The ecosystem is valued at <a href="https://tech.eu/2025/04/10/czech-republic-from-steady-roots-to-dynamic-growth/" class="src" target="_blank"><span class="highlight-blue">€25 billion</span></a>.</p>
-
-    <div class="data-grid">
-        <div class="data-card">
-            <h4>🦄 Unicorn Companies</h4>
-            <ul style="color: var(--text-secondary); padding-left: 1.5rem; font-size: 0.9rem;">
-                <li><strong><a href="https://www.avast.com" target="_blank" class="src">Avast</a></strong> (1988) — Cybersecurity. 435M users, <a href="https://www.zoominfo.com/c/avast-software/17803626" target="_blank" class="src">~1,900 employees</a>. Acquired by NortonLifeLock for ~$8B.</li>
-                <li><strong><a href="https://www.rohlik.group" target="_blank" class="src">Rohlik</a></strong> (2014) — Grocery delivery. 90-min delivery in 13 cities. Raised <a href="https://techround.co.uk/startups/top-unicorns-in-the-czech-republic/" target="_blank" class="src">$613M</a>.</li>
-                <li><strong><a href="https://www.productboard.com" target="_blank" class="src">Productboard</a></strong> (2014) — Product management SaaS. Valued at <a href="https://siliconcanals.com/unicorns-hiring-in-czech-republic/" target="_blank" class="src">$1.75B</a>. Clients: Microsoft, Disney, Zoom.</li>
-                <li><strong><a href="https://www.mews.com" target="_blank" class="src">Mews</a></strong> (2012) — Hotel software. Valued at <a href="https://www.expats.cz/czech-news/article/tech-startup-becomes-third-czech-firm-in-history-to-reach-unicorn-status-1" target="_blank" class="src">$1.2B+</a>. Acquired 8 competitors.</li>
-            </ul>
-        </div>
-        <div class="data-card">
-            <h4>🏢 Global Tech Presence</h4>
-            <ul style="color: var(--text-secondary); padding-left: 1.5rem; font-size: 0.9rem;">
-                <li><strong><a href="https://www.jetbrains.com" target="_blank" class="src">JetBrains</a></strong> — Developer tools (IntelliJ, PyCharm). HQ: Prague. 200-250 employees locally.</li>
-                <li><strong>Microsoft</strong>, <strong>Oracle</strong>, <strong>IBM</strong>, <strong>Google</strong> — All have R&D centers in CZ</li>
-                <li><strong>Pure Storage</strong> — 510+ employees in Prague</li>
-                <li><strong><a href="https://alcor-bpo.com/software-development-in-czech-republic-it-sector-overview/" target="_blank" class="src">130,000 software developers</a></strong> in the country</li>
-                <li>ICT sector revenue: <a href="https://alcor-bpo.com/software-development-in-czech-republic-it-sector-overview/" target="_blank" class="src">~€4.7B/year</a></li>
-            </ul>
-        </div>
-    </div>
-
-    <h3>R&D Investment</h3>
-    <p>Czech R&D spending was <a href="https://csu.gov.cz/rd-expenditure" class="src" target="_blank"><span class="highlight">CZK 146.9 billion (1.82% of GDP)</span></a> in 2024—below the EU average of 2.2%, but <a href="https://www.fxstreet.com/analysis/rd-spending-in-cee-below-eu-average-202512050745" class="src" target="_blank">highest in Central & Eastern Europe</a> alongside Slovenia. Over <a href="https://csu.gov.cz/rd-expenditure" class="src" target="_blank">60% is business-funded</a>. The country hosts multiple world-class research centers funded by EU structural programs.</p>
-
-    <div class="chart-container">
-        <div class="chart-title">R&D Spending as % of GDP (2024) — <a href="https://ec.europa.eu/eurostat/web/products-eurostat-news/w/ddn-20251204-2" target="_blank" style="color: var(--accent-gold);">Eurostat</a></div>
-        <div class="chart-wrapper">
-            <canvas id="rdSpendingChart"></canvas>
-        </div>
-    </div>
-
     <div class="map-container">
-        <div class="chart-title">Czech Tech Hubs & Key Facilities</div>
+        <div class="chart-title">České tech centra</div>
         <svg viewBox="0 0 612.46 350.62" xmlns="http://www.w3.org/2000/svg">
             <image href="https://jsvan.github.io/cz-econ-presentation/czech-republic.svg" width="612.46" height="350.62"/>
 
@@ -94,39 +43,28 @@
             <!-- ALL TEXT LAST (renders on top of shapes) -->
 
             <!-- Prague labels -->
-            <text x="212" y="113" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="bold">Prague</text>
-            <text x="212" y="167" fill="#888" font-size="9" text-anchor="middle">700+ startups</text>
+            <text x="212" y="113" fill="#2563eb" font-size="12" text-anchor="middle" font-weight="bold">Praha</text>
+            <text x="212" y="167" fill="#888" font-size="9" text-anchor="middle">700+ startupů</text>
             <text x="212" y="179" fill="#2563eb" font-size="9" text-anchor="middle">Avast, JetBrains, Rohlik</text>
             <!-- Brno labels -->
             <text x="409" y="244" fill="#16a34a" font-size="10" text-anchor="middle" font-weight="bold">Brno</text>
-            <text x="409" y="286" fill="#888" font-size="9" text-anchor="middle">R&D hub</text>
+            <text x="409" y="286" fill="#888" font-size="9" text-anchor="middle">Výzkum</text>
             <!-- Foxconn labels -->
             <text x="369" y="138" fill="#c9a227" font-size="10" font-weight="bold">Foxconn</text>
             <text x="369" y="150" fill="#888" font-size="9">Pardubice</text>
             <text x="308" y="170" fill="#888" font-size="9">Kutná Hora</text>
             <!-- Ostrava labels -->
             <text x="558" y="158" fill="#7c3aed" font-size="10" text-anchor="middle" font-weight="bold">Ostrava</text>
-            <text x="558" y="193" fill="#888" font-size="9" text-anchor="middle">IT outsourcing</text>
+            <text x="558" y="193" fill="#888" font-size="9" text-anchor="middle">IT služby</text>
         </svg>
         <div class="map-legend">
-            <div class="legend-item"><div class="legend-dot" style="background: #2563eb;"></div>Prague — <a href="https://tech.eu/2025/04/10/czech-republic-from-steady-roots-to-dynamic-growth/" target="_blank" class="src">700+ startups, 6 unicorns</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Brno — R&D & universities</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div>Foxconn facilities ($7B revenue)</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #7c3aed;"></div>Ostrava — IT services</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #2563eb;"></div>Praha — 700+ startupů</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Brno — výzkum</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div>Foxconn</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #7c3aed;"></div>Ostrava — IT služby</div>
         </div>
     </div>
 
-    <div class="industry-highlight">
-        <h3>Why Is Czech High-Tech Outperforming?</h3>
-        <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-top: 0.5rem;">
-            <li><strong>Central EU location:</strong> Same-day logistics to Germany, Austria, Poland</li>
-            <li><strong>Cost arbitrage:</strong> Software engineers earn ~40% less than in Germany despite proximity</li>
-            <li><strong>Engineering tradition:</strong> Strong technical universities, industrial heritage</li>
-            <li><strong>Foxconn effect:</strong> $7B electronics giant trains workforce, attracts supply chain</li>
-            <li><strong>Brain gain:</strong> Reverse migration as Czechs return from Silicon Valley with experience</li>
-        </ul>
-        <p style="margin-top: 1rem; margin-bottom: 0;"><strong>Challenge:</strong> The <a href="https://www.imf.org/en/news/articles/2024/11/26/mcs-112624-czech-republic-staff-concluding-statement-of-2024-aiv-mission" class="src" target="_blank">IMF warns</a> that "higher value-added sectors, including ICT services, are constrained by lack of skilled labor and limited access to capital."</p>
-    </div>
 </div>
 
 <script>
@@ -137,7 +75,7 @@ window.initChartsSlide2 = function() {
             labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
             datasets: [
                 {
-                    label: 'Germany',
+                    label: 'Německo',
                     data: [199, 205, 195, 210, 208, 182, 212, 223, 298, 266],
                     borderColor: ChartColors.gold,
                     backgroundColor: 'transparent',
@@ -147,7 +85,7 @@ window.initChartsSlide2 = function() {
                     borderWidth: 2
                 },
                 {
-                    label: 'France',
+                    label: 'Francie',
                     data: [110, 109, 109, 118, 121, 87, 98, 96, 120, 118],
                     borderColor: ChartColors.red,
                     backgroundColor: 'transparent',
@@ -157,7 +95,7 @@ window.initChartsSlide2 = function() {
                     borderWidth: 2
                 },
                 {
-                    label: 'Czech Republic',
+                    label: 'Česko',
                     data: [25, 25, 29, 36, 38, 40, 41, 45, 46, 52],
                     borderColor: ChartColors.blue,
                     backgroundColor: ChartColors.blueAlpha,
@@ -168,7 +106,7 @@ window.initChartsSlide2 = function() {
                     borderWidth: 3
                 },
                 {
-                    label: 'Poland',
+                    label: 'Polsko',
                     data: [17, 17, 19, 22, 20, 20, 24, 28, 30, 32],
                     borderColor: ChartColors.green,
                     backgroundColor: 'transparent',
@@ -192,7 +130,7 @@ window.initChartsSlide2 = function() {
             scales: {
                 y: {
                     type: 'logarithmic',
-                    title: { display: true, text: 'Billion USD (log scale)' },
+                    title: { display: true, text: 'Miliardy USD' },
                     min: 10,
                     max: 400,
                     grid: { color: '#1a1a1a' },
@@ -222,7 +160,7 @@ window.initChartsSlide2 = function() {
                 labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
                 datasets: [
                     {
-                        label: 'Czech Republic',
+                        label: 'Česko',
                         data: [100, 100, 119, 145, 152, 160, 167, 182, 185, 209],
                         borderColor: ChartColors.blue,
                         backgroundColor: 'transparent',
@@ -233,7 +171,7 @@ window.initChartsSlide2 = function() {
                         absoluteGain: '+$27B'
                     },
                     {
-                        label: 'Poland',
+                        label: 'Polsko',
                         data: [100, 102, 114, 132, 120, 121, 142, 167, 179, 192],
                         borderColor: ChartColors.green,
                         backgroundColor: 'transparent',
@@ -244,7 +182,7 @@ window.initChartsSlide2 = function() {
                         absoluteGain: '+$15B'
                     },
                     {
-                        label: 'Germany',
+                        label: 'Německo',
                         data: [100, 103, 98, 105, 104, 91, 106, 112, 149, 134],
                         borderColor: ChartColors.gold,
                         backgroundColor: 'transparent',
@@ -255,7 +193,7 @@ window.initChartsSlide2 = function() {
                         absoluteGain: '+$67B'
                     },
                     {
-                        label: 'France',
+                        label: 'Francie',
                         data: [100, 99, 99, 107, 110, 79, 89, 87, 109, 108],
                         borderColor: ChartColors.red,
                         backgroundColor: 'transparent',

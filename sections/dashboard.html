@@ -1,12 +1,11 @@
 <!-- SLIDE 10: COMPARATIVE DASHBOARD -->
 <div class="slide-content">
     <div class="section-number">12</div>
-    <div class="section-label">At a Glance</div>
-    <h2>Czech Industries Compared</h2>
-    <p>How do the industries covered in this presentation compare in terms of economic contribution, employment, and exports?</p>
-
+    <div class="section-label">Boží Pohled</div>
+    <h2>Všechno dohromady</h2>
+    <br/>
     <div class="map-container">
-        <div class="chart-title">Industrial Geography of Czechia</div>
+        <div class="chart-title">Krásné Česko</div>
         <svg viewBox="0 0 612.46 350.62" xmlns="http://www.w3.org/2000/svg">
             <image href="https://jsvan.github.io/cz-econ-presentation/czech-republic.svg" width="612.46" height="350.62"/>
                 
@@ -153,7 +152,7 @@
             <!-- CITY/REGION LABELS - rendered last so they appear on top -->
 
             <!-- Major cities -->
-            <text x="212" y="125" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Prague</text>
+            <text x="212" y="125" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Praha</text>
             <text x="409" y="250" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Brno</text>
             <text x="116" y="172" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Plzeň</text>
             <text x="558" y="158" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Ostrava</text>
@@ -167,13 +166,13 @@
             <text x="216" y="280" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Č. Budějovice</text>
 
             <!-- Mining -->
-            <text x="140" y="68" fill="#fff" font-size="10" text-anchor="middle" font-style="italic">North Bohemia</text>
-            <text x="140" y="95" fill="#ef4444" font-size="9" text-anchor="middle">Lignite</text>
+            <text x="140" y="68" fill="#fff" font-size="10" text-anchor="middle" font-style="italic">Severní Čechy</text>
+            <text x="140" y="95" fill="#ef4444" font-size="9" text-anchor="middle">Hnědé uhlí</text>
 
             <!-- Agriculture -->
             <text x="317" y="220" fill="#fff" font-size="10" text-anchor="middle" font-style="italic">Vysočina</text>
             <text x="467" y="193" fill="#fff" font-size="10" text-anchor="middle" font-style="italic">Haná</text>
-            <text x="400" y="325" fill="#fff" font-size="9" text-anchor="middle" font-style="italic">Wine region</text>
+            <text x="400" y="325" fill="#fff" font-size="9" text-anchor="middle" font-style="italic">Víno</text>
 
             <!-- High-tech -->
             <text x="334" y="131" fill="#fff" font-size="9" text-anchor="middle">Pardubice</text>
@@ -187,48 +186,38 @@
             <text x="460" y="124" fill="#14b8a6" font-size="9" text-anchor="middle">Dlouhé Stráně</text>
         </svg>
         <div class="map-legend" style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;">
-            <div class="legend-item"><div class="legend-dot" style="background: #7c3aed;"></div>Automotive (4.3% GDP)</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #2563eb;"></div>High-Tech (~5% GDP)</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #14b8a6;"></div>Energy (41% nuclear)</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #ef4444;"></div>Mining (~1% GDP)</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #f59e0b;"></div>Beer (~0.5% GDP)</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Agriculture (1.6% GDP)</div>
-            <div class="legend-item"><div class="legend-dot" style="background: #9ca3af;"></div>Glass (~0.7% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #7c3aed;"></div>Auta (4.3% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #2563eb;"></div>Tech (~5% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #14b8a6;"></div>Energie (41% jaderná)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #ef4444;"></div>Těžba (~1% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #f59e0b;"></div>Pivo (~0.5% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Farmy (1.6% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #9ca3af;"></div>Sklo (~0.7% GDP)</div>
         </div>
     </div>
 
     <div style="display: flex; gap: 1rem;">
         <div class="chart-container" style="flex: 1;">
-            <div class="chart-title">GDP Contribution (% of total)</div>
+            <div class="chart-title">Část GDP (% všeho)</div>
             <div class="chart-wrapper">
                 <canvas id="gdpByIndustryChart"></canvas>
             </div>
         </div>
         <div class="chart-container" style="flex: 1;">
-            <div class="chart-title">Employment (thousands)</div>
+            <div class="chart-title">Pracovníků (tisíc)</div>
             <div class="chart-wrapper">
                 <canvas id="employmentByIndustryChart"></canvas>
             </div>
         </div>
         <div class="chart-container" style="flex: 1;">
-            <div class="chart-title">Exports ($ billions)</div>
+            <div class="chart-title">Export (miliardy $)</div>
             <div class="chart-wrapper">
                 <canvas id="exportsByIndustryChart"></canvas>
             </div>
         </div>
     </div>
 
-    <div class="industry-highlight" style="margin-top: 1rem;">
-        <h3>The Story These Charts Tell</h3>
-        <ul style="color: var(--text-secondary); padding-left: 1.5rem;">
-            <li><strong>High-tech is the rising star</strong> — ~5% of GDP from startups alone; 150K jobs; $51.9B exports growing 13.4% YoY; 6 unicorns</li>
-            <li><strong>Automotive still dominates traditional industry</strong> — 4.3% of GDP directly, ~10% with supply chain; 434K jobs; but increasingly threatened by EV transition</li>
-            <li><strong>Mining is declining but significant</strong> — ~1% of GDP, 18K jobs; 3rd largest EU coal producer; 4th globally in kaolin; 2033 coal phase-out looms</li>
-            <li><strong>Beer punches above its weight</strong> — Small GDP share (~0.5%) but 550 breweries and huge cultural significance</li>
-            <li><strong>Glass is niche but prestigious</strong> — 7,000 jobs, $2.4B exports, 750+ years of tradition</li>
-            <li><strong>Agriculture is shrinking</strong> — Down to 1.6% of GDP, but Czechia remains cereal self-sufficient</li>
-        </ul>
-    </div>
+    
 </div>
 
 <script>
@@ -243,8 +232,8 @@ window.initChartsSlide8 = function() {
         glass: '#9ca3af'        // gray
     };
 
-    // Consistent order: High-Tech, Automotive, Agriculture, Mining, Glass, Beer
-    const labels = ['High-Tech', 'Automotive', 'Agriculture', 'Mining', 'Glass', 'Beer'];
+    // Consistent order: Tech, Auta, Farmy, Těžba, Sklo, Pivo
+    const labels = ['Tech', 'Auta', 'Farmy', 'Těžba', 'Sklo', 'Pivo'];
     const barColors = [colors.highTech, colors.automotive, colors.agriculture, colors.mining, colors.glass, colors.beer];
 
     createChart('gdpByIndustryChart', {

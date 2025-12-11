@@ -1,32 +1,25 @@
 <!-- SLIDE 3: AUTOMOTIVE -->
 <div class="slide-content">
     <div class="section-number">03</div>
-    <div class="section-label">The Engine</div>
-    <h2>Automotive: The Dominant Industry <span class="gdp-tag">4.3% of GDP</span></h2>
-    <p>In 2024, Czech factories produced <a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" class="src" target="_blank"><span class="highlight">1,452,881 vehicles</span></a>—a new record (+3.9%). Vehicle manufacturing alone contributes <a href="https://ec.europa.eu/eurostat/statistics-explained/index.php?title=Employment_and_value_added_using_FIGARO_data_-_view_into_the_automotive_industry" class="src" target="_blank"><span class="highlight">€12.4B / 4.3% of GDP</span></a> (Eurostat)—highest in the EU. With the full supply chain, the <a href="https://www.elibrary.imf.org/view/journals/002/2025/036/article-A002-en.xml" class="src" target="_blank">IMF estimates ~10% of GDP</a> and <span class="highlight-red">~434,000 jobs</span> (~8% of workforce). EVs: 10.4% of production (<a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" class="src" target="_blank">151,162 units</a>).</p>
-
+    <div class="section-label">šlápnout na plyn</div>
+    <h2>Auta: Největší Český Průmysl<span class="gdp-tag">4 - 10% GDP</span></h2>
+    <br/>
     <div class="chart-container">
-        <div class="chart-title">Czech Car Production by Year (Million Units) — <a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" target="_blank" style="color: var(--accent-gold);">AutoSAP</a></div>
+        <div class="chart-title">Roční Produkce Automobilů (Milión) — <a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" target="_blank" style="color: var(--accent-gold);">AutoSAP</a></div>
         <div class="chart-wrapper">
             <canvas id="carProductionChart"></canvas>
         </div>
     </div>
 
-    <h3>Where Do Czech-Made Škodas Go? (2024)</h3>
-    <p>Germany alone takes <a href="https://www.skoda-storyboard.com/en/press-releases/skoda-auto-delivers-926600-vehicles-to-customers-worldwide-in-2024/" class="src" target="_blank"><span class="highlight">187,100 Škodas</span></a>—more than double what stays in Czechia. <a href="https://www.skoda-storyboard.com/en/press-releases/skoda-auto-delivers-926600-vehicles-to-customers-worldwide-in-2024/" target="_blank" class="src">Škoda 2024 total: 926,600 vehicles globally (+6.9%)</a>.</p>
-
     <div class="chart-container">
-        <div class="chart-title">Top Škoda Export Destinations (Units Delivered, 2024) — <a href="https://www.skoda-storyboard.com/en/press-releases/skoda-auto-delivers-926600-vehicles-to-customers-worldwide-in-2024/" target="_blank" style="color: var(--accent-gold);">Škoda Storyboard</a></div>
+        <div class="chart-title">Kam jedou Škody? (2024) — <a href="https://www.skoda-storyboard.com/en/press-releases/skoda-auto-delivers-926600-vehicles-to-customers-worldwide-in-2024/" target="_blank" style="color: var(--accent-gold);">Škoda Storyboard</a></div>
         <div class="chart-wrapper">
             <canvas id="skodaExportsChart"></canvas>
         </div>
     </div>
 
-    <h3>The Three Factories</h3>
-    <p>All Czech cars come from just three plants. Data from <a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" class="src" target="_blank">AutoSAP 2024</a>:</p>
-
     <div class="map-container">
-        <div class="chart-title">Factory Locations & Production Share (2024)</div>
+        <div class="chart-title">Tři Továrny (2024)</div>
         <svg viewBox="0 0 612.46 350.62" xmlns="http://www.w3.org/2000/svg">
             <image href="https://jsvan.github.io/cz-econ-presentation/czech-republic.svg" width="612.46" height="350.62"/>
 
@@ -50,7 +43,7 @@
             <!-- ALL TEXT LAST (renders on top of shapes) -->
 
             <!-- Prague label -->
-            <text x="212" y="127" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Prague</text>
+            <text x="212" y="127" fill="#fff" font-size="10" text-anchor="middle" font-weight="bold">Praha</text>
 
             <!-- Škoda labels -->
             <text x="255" y="76" fill="#c9a227" font-size="10" text-anchor="middle" font-weight="bold">Škoda</text>
@@ -66,12 +59,12 @@
             <text x="572" y="179" fill="#2563eb" font-size="10" text-anchor="middle" font-weight="bold">Hyundai</text>
             <text x="572" y="214" fill="#fff" font-size="9" text-anchor="middle">Nošovice</text>
             <text x="572" y="226" fill="#2563eb" font-size="10" text-anchor="middle" font-weight="bold">22.8%</text>
-            <text x="572" y="241" fill="#fff" font-size="8" text-anchor="middle">Moravia-Silesia</text>
+            <text x="572" y="241" fill="#fff" font-size="8" text-anchor="middle">Morava-Slezsko</text>
         </svg>
         <div class="map-legend">
-            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div><a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" target="_blank" class="src">Škoda (VW) - 896,933 cars</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #2563eb;"></div><a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" target="_blank" class="src">Hyundai - 330,890 cars</a></div>
-            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div><a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" target="_blank" class="src">Toyota - 225,058 cars</a></div>
+            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div><a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" target="_blank" class="src">Škoda (VW) - 896,933 auta</a></div>
+            <div class="legend-item"><div class="legend-dot" style="background: #2563eb;"></div><a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" target="_blank" class="src">Hyundai - 330,890 auta</a></div>
+            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div><a href="https://autosap.cz/en/aktualita/2024-rok-rekordni-vyroby-osobnich-automobilu/" target="_blank" class="src">Toyota - 225,058 auta</a></div>
         </div>
     </div>
 
@@ -82,9 +75,9 @@ window.initChartsSlide3 = function() {
     createChart('skodaExportsChart', {
         type: 'bar',
         data: {
-            labels: ['Germany', 'Czechia', 'UK', 'Poland', 'Turkey', 'Spain'],
+            labels: ['Německo', 'Česko', 'UK', 'Polsko', 'Turecko', 'Španělsko'],
             datasets: [{
-                label: 'Units delivered',
+                label: 'Dodaná auta',
                 data: [187100, 84500, 78700, 61400, 42200, 36300],
                 backgroundColor: [ChartColors.gold, ChartColors.blue, ChartColors.gray, ChartColors.gray, ChartColors.gray, ChartColors.gray],
                 borderWidth: 0
@@ -96,7 +89,7 @@ window.initChartsSlide3 = function() {
             indexAxis: 'y',
             plugins: { legend: { display: false } },
             scales: {
-                x: { title: { display: true, text: 'Units' }, grid: { color: '#1a1a1a' } },
+                x: { title: { display: true, text: 'Auta' }, grid: { color: '#1a1a1a' } },
                 y: { grid: { display: false } }
             }
         }
@@ -107,7 +100,7 @@ window.initChartsSlide3 = function() {
         data: {
             labels: ['2000', '2005', '2010', '2015', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
             datasets: [{
-                label: 'Vehicles (millions)',
+                label: 'Auta (milion)',
                 data: [0.46, 0.60, 1.08, 1.30, 1.44, 1.43, 1.16, 1.11, 1.22, 1.40, 1.45],
                 borderColor: ChartColors.gold,
                 backgroundColor: ChartColors.goldAlpha,
@@ -122,7 +115,7 @@ window.initChartsSlide3 = function() {
             maintainAspectRatio: false,
             plugins: { legend: { display: false } },
             scales: {
-                y: { title: { display: true, text: 'Million vehicles' }, min: 0, max: 1.6, grid: { color: '#1a1a1a' } },
+                y: { title: { display: true, text: 'Milion aut' }, min: 0, max: 1.6, grid: { color: '#1a1a1a' } },
                 x: { grid: { color: '#1a1a1a' } }
             }
         }
