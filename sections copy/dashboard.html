@@ -1,0 +1,256 @@
+<!-- SLIDE 10: COMPARATIVE DASHBOARD -->
+<div class="slide-content">
+    <div class="section-number">12</div>
+    <div class="section-label">At a Glance</div>
+    <h2>Czech Industries Compared</h2>
+    <p>How do the industries covered in this presentation compare in terms of economic contribution, employment, and exports?</p>
+
+    <div class="map-container">
+        <div class="chart-title">Industrial Geography of Czechia</div>
+        <svg viewBox="0 0 500 300" xmlns="http://www.w3.org/2000/svg">
+            <!-- Czech Republic outline -->
+            <path d="M50,150 Q80,80 150,60 Q200,40 260,50 Q320,60 380,90 Q430,120 450,160 Q460,200 430,230 Q380,260 320,250 Q260,240 200,250 Q140,260 100,230 Q60,200 50,150 Z" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+
+            <!-- MINING (Red) - scaled by geographic area -->
+            <!-- North Bohemian Basin - lignite (~1,400 km²) -->
+            <ellipse cx="130" cy="95" rx="50" ry="20" fill="#ef4444" opacity="0.3"/>
+            <circle cx="130" cy="95" r="5" fill="#ef4444"/>
+            <!-- Sokolov Basin - lignite (~312 km²) -->
+            <ellipse cx="65" cy="115" rx="22" ry="14" fill="#ef4444" opacity="0.3"/>
+            <circle cx="65" cy="115" r="4" fill="#ef4444"/>
+            <!-- Ostrava-Karviná hard coal (~1,500 km²) -->
+            <ellipse cx="400" cy="160" rx="50" ry="22" fill="#ef4444" opacity="0.3"/>
+            <circle cx="400" cy="160" r="5" fill="#ef4444"/>
+            <!-- Plzeň kaolin (~50 km² active) -->
+            <ellipse cx="105" cy="170" rx="8" ry="6" fill="#ef4444" opacity="0.35"/>
+            <circle cx="105" cy="170" r="3" fill="#ef4444"/>
+            <!-- Karlovy Vary kaolin (~30 km²) -->
+            <ellipse cx="72" cy="95" rx="6" ry="5" fill="#ef4444" opacity="0.35"/>
+            <circle cx="72" cy="95" r="3" fill="#ef4444"/>
+            <!-- Český Krumlov graphite (~10 km²) -->
+            <circle cx="165" cy="230" r="4" fill="#ef4444" opacity="0.35"/>
+            <circle cx="165" cy="230" r="2" fill="#ef4444"/>
+            <!-- Cínovec lithium (future ~1 km² - dashed) -->
+            <circle cx="145" cy="65" r="2" fill="none" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3,2" opacity="0.5"/>
+            <circle cx="145" cy="65" r="1" fill="#ef4444"/>
+
+            <!-- AUTOMOTIVE (Purple) - factory sites are tiny (~0.5-2 km²) -->
+            <!-- Škoda Mladá Boleslav (~0.5 km²) -->
+            <circle cx="225" cy="105" r="4" fill="#7c3aed" opacity="0.5"/>
+            <circle cx="225" cy="105" r="2" fill="#7c3aed"/>
+            <!-- Toyota Kolín (~1.2 km²) -->
+            <circle cx="255" cy="140" r="4" fill="#7c3aed" opacity="0.5"/>
+            <circle cx="255" cy="140" r="2" fill="#7c3aed"/>
+            <!-- Hyundai Nošovice (~2 km²) -->
+            <circle cx="410" cy="175" r="5" fill="#7c3aed" opacity="0.5"/>
+            <circle cx="410" cy="175" r="2" fill="#7c3aed"/>
+
+            <!-- HIGH-TECH (Blue) - office/factory sites (<1 km² each) -->
+            <!-- Prague (major hub - multiple tech parks ~5 km² total) -->
+            <circle cx="195" cy="135" r="6" fill="#2563eb" opacity="0.5"/>
+            <circle cx="195" cy="135" r="3" fill="#2563eb"/>
+            <!-- Brno (R&D hub ~2 km²) -->
+            <circle cx="310" cy="200" r="5" fill="#2563eb" opacity="0.5"/>
+            <circle cx="310" cy="200" r="2" fill="#2563eb"/>
+            <!-- Foxconn Pardubice (~1 km²) -->
+            <circle cx="265" cy="120" r="4" fill="#2563eb" opacity="0.5"/>
+            <circle cx="265" cy="120" r="2" fill="#2563eb"/>
+            <!-- Foxconn Kutná Hora (~0.5 km²) -->
+            <circle cx="240" cy="145" r="3" fill="#2563eb" opacity="0.5"/>
+            <circle cx="240" cy="145" r="1" fill="#2563eb"/>
+            <!-- Ostrava IT (~1 km²) -->
+            <circle cx="395" cy="155" r="4" fill="#2563eb" opacity="0.5"/>
+            <circle cx="395" cy="155" r="2" fill="#2563eb"/>
+
+            <!-- BEER (Amber) - brewery sites are tiny (~0.1-0.4 km²) -->
+            <!-- Plzeň - Prazdroj HQ (~0.4 km² - largest brewery) -->
+            <circle cx="100" cy="165" r="5" fill="#f59e0b" opacity="0.5"/>
+            <circle cx="100" cy="165" r="2" fill="#f59e0b"/>
+            <!-- České Budějovice - Budvar (~0.1 km²) -->
+            <circle cx="175" cy="225" r="3" fill="#f59e0b" opacity="0.5"/>
+            <circle cx="175" cy="225" r="1" fill="#f59e0b"/>
+            <!-- Prague - Staropramen (~0.15 km²) -->
+            <circle cx="190" cy="140" r="3" fill="#f59e0b" opacity="0.5"/>
+            <circle cx="190" cy="140" r="1" fill="#f59e0b"/>
+            <!-- Velké Popovice - Kozel -->
+            <circle cx="220" cy="165" r="2" fill="#f59e0b" opacity="0.5"/>
+            <circle cx="220" cy="165" r="1" fill="#f59e0b"/>
+            <!-- Nošovice - Radegast -->
+            <circle cx="405" cy="180" r="2" fill="#f59e0b" opacity="0.5"/>
+            <circle cx="405" cy="180" r="1" fill="#f59e0b"/>
+            <!-- Brno - Starobrno -->
+            <circle cx="315" cy="205" r="2" fill="#f59e0b" opacity="0.5"/>
+            <circle cx="315" cy="205" r="1" fill="#f59e0b"/>
+            <!-- Krušovice - Heineken -->
+            <circle cx="155" cy="105" r="2" fill="#f59e0b" opacity="0.5"/>
+            <circle cx="155" cy="105" r="1" fill="#f59e0b"/>
+            <!-- Velké Březno - Heineken -->
+            <circle cx="175" cy="75" r="2" fill="#f59e0b" opacity="0.5"/>
+            <circle cx="175" cy="75" r="1" fill="#f59e0b"/>
+            <!-- Ostrava - Ostravar -->
+            <circle cx="420" cy="145" r="2" fill="#f59e0b" opacity="0.5"/>
+            <circle cx="420" cy="145" r="1" fill="#f59e0b"/>
+
+            <!-- AGRICULTURE (Green) - scaled by geographic area -->
+            <!-- South Bohemia - Potatoes/Fish (~10,057 km²) -->
+            <ellipse cx="150" cy="200" rx="60" ry="42" fill="#16a34a" opacity="0.2"/>
+            <circle cx="150" cy="200" r="5" fill="#16a34a"/>
+            <!-- Vysočina Highlands - Potatoes (~6,800 km²) -->
+            <ellipse cx="270" cy="185" rx="50" ry="35" fill="#16a34a" opacity="0.2"/>
+            <circle cx="270" cy="185" r="5" fill="#16a34a"/>
+            <!-- Polabí - Wheat/Sugar Beet Belt (~3,000 km²) -->
+            <ellipse cx="210" cy="115" rx="33" ry="23" fill="#16a34a" opacity="0.3"/>
+            <circle cx="210" cy="115" r="5" fill="#16a34a"/>
+            <!-- Haná Valley - Moravia's breadbasket (~1,315 km²) -->
+            <ellipse cx="360" cy="170" rx="22" ry="15" fill="#16a34a" opacity="0.25"/>
+            <circle cx="360" cy="170" r="5" fill="#16a34a"/>
+            <!-- South Moravia - Wine region (~180 km²) -->
+            <ellipse cx="400" cy="220" rx="8" ry="6" fill="#16a34a" opacity="0.4"/>
+            <circle cx="400" cy="220" r="4" fill="#16a34a"/>
+
+            <!-- GLASS (Gray/White) - factory sites (<0.5 km²) -->
+            <!-- Northern Bohemia glass region (Jablonec ~0.5 km² factories) -->
+            <circle cx="210" cy="70" r="4" fill="#9ca3af" opacity="0.5"/>
+            <circle cx="210" cy="70" r="2" fill="#9ca3af"/>
+            <!-- Karlovy Vary (Moser ~0.1 km²) -->
+            <circle cx="65" cy="105" r="3" fill="#9ca3af" opacity="0.5"/>
+            <circle cx="65" cy="105" r="1" fill="#9ca3af"/>
+
+            <!-- CITY/REGION LABELS (white) -->
+            <text x="195" y="150" fill="#fff" font-size="7" text-anchor="middle" font-weight="bold">Prague</text>
+            <text x="310" y="215" fill="#fff" font-size="6" text-anchor="middle">Brno</text>
+            <text x="100" y="180" fill="#fff" font-size="6" text-anchor="middle">Plzeň</text>
+            <text x="420" y="165" fill="#fff" font-size="6" text-anchor="middle">Ostrava</text>
+            <text x="225" y="115" fill="#fff" font-size="5" text-anchor="middle">M. Boleslav</text>
+            <text x="175" y="235" fill="#fff" font-size="5" text-anchor="middle">Č. Budějovice</text>
+        </svg>
+        <div class="map-legend" style="display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem;">
+            <div class="legend-item"><div class="legend-dot" style="background: #7c3aed;"></div>Automotive (4.3% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #2563eb;"></div>High-Tech (~5% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #ef4444;"></div>Mining (~1% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #f59e0b;"></div>Beer (~0.5% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Agriculture (1.6% GDP)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #9ca3af;"></div>Glass (~0.7% GDP)</div>
+        </div>
+    </div>
+
+    <div style="display: flex; gap: 1rem;">
+        <div class="chart-container" style="flex: 1;">
+            <div class="chart-title">GDP Contribution (% of total)</div>
+            <div class="chart-wrapper">
+                <canvas id="gdpByIndustryChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-container" style="flex: 1;">
+            <div class="chart-title">Employment (thousands)</div>
+            <div class="chart-wrapper">
+                <canvas id="employmentByIndustryChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-container" style="flex: 1;">
+            <div class="chart-title">Exports ($ billions)</div>
+            <div class="chart-wrapper">
+                <canvas id="exportsByIndustryChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+    <div class="industry-highlight" style="margin-top: 1rem;">
+        <h3>The Story These Charts Tell</h3>
+        <ul style="color: var(--text-secondary); padding-left: 1.5rem;">
+            <li><strong>High-tech is the rising star</strong> — ~5% of GDP from startups alone; 150K jobs; $51.9B exports growing 13.4% YoY; 6 unicorns</li>
+            <li><strong>Automotive still dominates traditional industry</strong> — 4.3% of GDP directly, ~10% with supply chain; 434K jobs; but increasingly threatened by EV transition</li>
+            <li><strong>Mining is declining but significant</strong> — ~1% of GDP, 18K jobs; 3rd largest EU coal producer; 4th globally in kaolin; 2033 coal phase-out looms</li>
+            <li><strong>Beer punches above its weight</strong> — Small GDP share (~0.5%) but 550 breweries and huge cultural significance</li>
+            <li><strong>Glass is niche but prestigious</strong> — 7,000 jobs, $2.4B exports, 750+ years of tradition</li>
+            <li><strong>Agriculture is shrinking</strong> — Down to 1.6% of GDP, but Czechia remains cereal self-sufficient</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+window.initChartsSlide8 = function() {
+    // Industry colors matching the map
+    const colors = {
+        automotive: '#7c3aed',  // purple
+        highTech: '#2563eb',    // blue
+        mining: '#ef4444',      // red
+        beer: '#f59e0b',        // amber
+        agriculture: '#16a34a', // green
+        glass: '#9ca3af'        // gray
+    };
+
+    // Consistent order: High-Tech, Automotive, Agriculture, Mining, Glass, Beer
+    const labels = ['High-Tech', 'Automotive', 'Agriculture', 'Mining', 'Glass', 'Beer'];
+    const barColors = [colors.highTech, colors.automotive, colors.agriculture, colors.mining, colors.glass, colors.beer];
+
+    createChart('gdpByIndustryChart', {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '% of GDP',
+                data: [5.0, 4.3, 1.6, 1.0, 0.7, 0.5],
+                backgroundColor: barColors,
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { grid: { color: '#1a1a1a' }, max: 6 },
+                y: { grid: { display: false } }
+            }
+        }
+    });
+
+    createChart('employmentByIndustryChart', {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: 'Thousands employed',
+                data: [150, 434, 130, 18, 7, 15],
+                backgroundColor: barColors,
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { grid: { color: '#1a1a1a' } },
+                y: { grid: { display: false } }
+            }
+        }
+    });
+
+    createChart('exportsByIndustryChart', {
+        type: 'bar',
+        data: {
+            labels: labels,
+            datasets: [{
+                label: '$ billions',
+                data: [51.9, 45, 1.5, 4.9, 2.4, 0.5],
+                backgroundColor: barColors,
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { grid: { color: '#1a1a1a' }, type: 'logarithmic', min: 0.1, max: 100 },
+                y: { grid: { display: false } }
+            }
+        }
+    });
+};
+</script>

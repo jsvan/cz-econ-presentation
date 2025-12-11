@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Czech Economy: Factory Floor of Europe</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Source+Sans+3:wght@300;400;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+</head>
+<body>
+    <div class="slideshow-container" id="slideshow-container">
+        <!-- Slides will be dynamically created -->
+    </div>
+
+    <!-- Navigation Controls -->
+    <nav class="nav-controls">
+        <button class="nav-btn" id="prev-btn" title="Previous (←)">←</button>
+        <div class="progress-dots"></div>
+        <div class="slide-counter"><span class="current">1</span> / <span class="total">1</span></div>
+        <button class="nav-btn" id="next-btn" title="Next (→)">→</button>
+    </nav>
+
+    <div class="keyboard-hint">
+        <kbd>←</kbd> <kbd>→</kbd> Navigate &nbsp;|&nbsp; <kbd>F</kbd> Fullscreen &nbsp;|&nbsp; <kbd>Home</kbd> <kbd>End</kbd> Jump
+    </div>
+
+    <!-- Load common chart utilities -->
+    <script src="charts-common.js"></script>
+
+    <!-- Load sections -->
+    <script>
+    (function() {
+        // Section files in order
+        const sections = [
+            'sections/hero.html',
+            'sections/beer.html',
+            'sections/farmland.html',
+            'sections/mining.html',
+            'sections/automotive.html',
+            // 'sections/big-picture.html',
+            'sections/high-tech.html',
+            'sections/energy.html',
+            // 'sections/hops.html',
+            // 'sections/glass.html',
+            //'sections/regional.html',
+            // 'sections/perspectives.html',
+            'sections/dashboard.html',
+            'sections/footer.html'
+        ];
+
+        // Store init functions mapped to actual slide indices
+        window.slideInitFunctions = {};
+
+        // Create slide divs dynamically
+        function createSlides() {
+            const container = document.getElementById('slideshow-container');
+            sections.forEach((_, index) => {
+                const slide = document.createElement('div');
+                slide.className = 'slide' + (index === 0 ? ' active' : '');
+                slide.id = `slide-${index}`;
+                container.appendChild(slide);
+            });
+            // Update counter total
+            document.querySelector('.slide-counter .total').textContent = sections.length;
+        }
+
+        // Load all sections sequentially to properly capture init functions
+        async function loadSections() {
+            for (let index = 0; index < sections.length; index++) {
+                const url = sections[index];
+                try {
+                    const response = await fetch(url);
+                    if (!response.ok) throw new Error(`Failed to load ${url}`);
+                    const html = await response.text();
+
+                    const slide = document.getElementById(`slide-${index}`);
+                    if (slide) {
+                        slide.innerHTML = html;
+
+                        // Find any initChartsSlide* functions before executing scripts
+                        const existingInits = Object.keys(window).filter(k => k.startsWith('initChartsSlide'));
+
+                        // Execute any inline scripts in the section
+                        const scripts = slide.querySelectorAll('script');
+                        scripts.forEach(script => {
+                            const newScript = document.createElement('script');
+                            newScript.textContent = script.textContent;
+                            document.body.appendChild(newScript);
+                            script.remove();
+                        });
+
+                        // Find newly added init function and map it to this slide's index
+                        const newInits = Object.keys(window).filter(k =>
+                            k.startsWith('initChartsSlide') && !existingInits.includes(k)
+                        );
+                        if (newInits.length > 0) {
+                            window.slideInitFunctions[index] = window[newInits[0]];
+                        }
+
+                        // Dynamically set section number based on slide index
+                        const sectionNum = slide.querySelector('.section-number');
+                        if (sectionNum) {
+                            sectionNum.textContent = String(index).padStart(2, '0');
+                        }
+                    }
+                } catch (error) {
+                    console.error(`Error loading section ${index}:`, error);
+                    const slide = document.getElementById(`slide-${index}`);
+                    if (slide) {
+                        slide.innerHTML = `<div class="slide-content"><p style="color: var(--accent-red);">Error loading section: ${url}</p></div>`;
+                    }
+                }
+            }
+            console.log('All sections loaded');
+        }
+
+        // Initialize everything after DOM is ready
+        document.addEventListener('DOMContentLoaded', async () => {
+            createSlides();
+            await loadSections();
+
+            // Now load slideshow controller
+            const script = document.createElement('script');
+            script.src = 'slideshow.js';
+            document.body.appendChild(script);
+        });
+    })();
+    </script>
+</body>
+</html>

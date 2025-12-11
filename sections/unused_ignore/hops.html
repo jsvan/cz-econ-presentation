@@ -1,0 +1,80 @@
+<!-- SLIDE 5: HOPS -->
+<div class="slide-content">
+    <div class="section-number">06</div>
+    <div class="section-label">Green Gold</div>
+    <h2>Hops: A 1,200-Year Tradition <span class="gdp-tag green">&lt;0.05% of GDP*</span></h2>
+    <p>The Žatec (Saaz) region has grown hops since at least the 9th century. Today Czechia is the <a href="https://www.barthhaas.com/ressources/blog/blog-article/hop-update-june-2024" class="src" target="_blank">world's 3rd largest hop producer</a> with <span class="highlight">4,852 hectares</span> and ~6,500 tons annually—but dwarfed by Germany (~20,600 ha) and USA (~22,500 ha). <a href="https://www.beerandbrewing.com/the-world-of-hops-beyond-saaz" class="src" target="_blank">82% is the prized Saaz variety</a>. In 2023, Žatec became the <a href="https://whc.unesco.org/en/list/1558/" class="src" target="_blank">first hop landscape inscribed as UNESCO World Heritage</a>.</p>
+
+    <div class="chart-container">
+        <div class="chart-title">World Hop Acreage by Country (2024, hectares) — <a href="https://www.barthhaas.com/ressources/blog/blog-article/hop-update-june-2024" target="_blank" style="color: var(--accent-gold);">BarthHaas</a></div>
+        <div class="chart-wrapper">
+            <canvas id="hopAcreageChart"></canvas>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div class="chart-title">Czech Hop Regions — <a href="https://whc.unesco.org/en/list/1558/" target="_blank" style="color: var(--accent-gold);">UNESCO</a></div>
+        <svg viewBox="0 0 612.46 350.62" xmlns="http://www.w3.org/2000/svg">
+            <image href="../czech-republic.svg" width="612.46" height="350.62"/>
+            <!-- Žatec/Saaz region (main) - 77% of production (Ústecký, northwest) -->
+            <ellipse cx="150" cy="95" rx="45" ry="28" fill="#16a34a" opacity="0.4"/>
+            <circle cx="150" cy="95" r="8" fill="#16a34a"/>
+            <text x="150" y="65" fill="#16a34a" font-size="12" text-anchor="middle" font-weight="bold">Žatec (Saaz)</text>
+            <text x="150" y="133" fill="#16a34a" font-size="9" text-anchor="middle">~77% of CZ hops</text>
+            <text x="150" y="145" fill="#888" font-size="8" text-anchor="middle">UNESCO 2023</text>
+            <!-- Úštěk region (east of Žatec, still in Ústecký) -->
+            <ellipse cx="230" cy="70" rx="20" ry="12" fill="#c9a227" opacity="0.3"/>
+            <circle cx="230" cy="70" r="4" fill="#c9a227"/>
+            <text x="255" y="73" fill="#c9a227" font-size="9">Úštěk</text>
+            <!-- Tršice region (Olomoucký, Moravia) -->
+            <ellipse cx="410" cy="175" rx="18" ry="12" fill="#c9a227" opacity="0.3"/>
+            <circle cx="410" cy="175" r="4" fill="#c9a227"/>
+            <text x="410" y="198" fill="#c9a227" font-size="9" text-anchor="middle">Tršice</text>
+            <!-- Prague marker -->
+            <circle cx="220" cy="140" r="4" fill="#fff"/><text x="220" y="130" fill="#fff" font-size="8" text-anchor="middle">Prague</text>
+        </svg>
+        <div class="map-legend">
+            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Žatec — Primary region (<a href="https://whc.unesco.org/en/list/1558/" target="_blank" class="src">UNESCO</a>)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div>Secondary regions</div>
+        </div>
+    </div>
+
+    <div class="data-card" style="margin-top: 2rem;">
+        <h4>Why Saaz Hops Are Special</h4>
+        <ul style="color: var(--text-secondary); padding-left: 1.5rem;">
+            <li>Low alpha acid (3-5%) = subtle, refined bitterness</li>
+            <li>High essential oil content = distinctive spicy/floral aroma</li>
+            <li><a href="https://www.beerandbrewing.com/the-world-of-hops-beyond-saaz" target="_blank" class="src">Protected Designation of Origin (PDO)</a> — first for any hop in EU</li>
+            <li>The Žatec microclimate: drier than Czech average, ideal conditions</li>
+            <li><a href="https://whc.unesco.org/en/list/1558/" target="_blank" class="src">Emperor Charles IV banned hop cuttings exports under penalty of death</a> (14th century)</li>
+            <li>Used in Pilsner Urquell, Guinness, Stella Artois, and countless others</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+window.initChartsSlide6 = function() {
+    createChart('hopAcreageChart', {
+        type: 'bar',
+        data: {
+            labels: ['USA', 'Germany', 'Czechia', 'China', 'Poland', 'Slovenia', 'UK'],
+            datasets: [{
+                label: 'Hectares (2024)',
+                data: [22545, 20629, 4852, 2800, 1600, 1500, 900],
+                backgroundColor: [ChartColors.gray, ChartColors.gray, ChartColors.green, ChartColors.gray, ChartColors.gray, ChartColors.gray, ChartColors.gray],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: {
+                x: { title: { display: true, text: 'Hectares' }, grid: { color: '#1a1a1a' } },
+                y: { grid: { display: false } }
+            }
+        }
+    });
+};
+</script>

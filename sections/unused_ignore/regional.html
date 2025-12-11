@@ -1,0 +1,113 @@
+<!-- SLIDE 8: REGIONAL COMPARISON -->
+<div class="slide-content">
+    <div class="section-number">10</div>
+    <div class="section-label">Sandwiched</div>
+    <h2>Czechia Between Germany and Poland</h2>
+    <p>Czechia is geographically and economically sandwiched between two very different neighbors. Germany (to the west) is in its <a href="https://en.wikipedia.org/wiki/German_economic_crisis_(2022–present)" class="src" target="_blank">worst crisis since WWII</a>. Poland (to the east) <a href="https://en.wikipedia.org/wiki/Economy_of_Poland" class="src" target="_blank">hasn't had a recession since 1992</a>. Czech performance falls in between—but is increasingly dragged down by its German dependency.</p>
+
+    <div class="chart-container">
+        <div class="chart-title">GDP Growth: Czechia vs Poland vs Germany (2015-2024) — <a href="https://think.ing.com/snaps/poland-cee-peers-2024/" target="_blank" style="color: var(--accent-gold);">ING Economics</a></div>
+        <div class="chart-wrapper">
+            <canvas id="gdpCompareChart"></canvas>
+        </div>
+    </div>
+
+    <div class="comparison" style="grid-template-columns: repeat(3, 1fr);">
+        <div class="country-box">
+            <h3>🇩🇪 Germany</h3>
+            <ul>
+                <li>GDP 2024: <a href="https://en.wikipedia.org/wiki/German_economic_crisis_(2022–present)" target="_blank" class="src"><span class="highlight-red">0.0%</span></a></li>
+                <li>GDP 2023: <span class="highlight-red">-0.3%</span></li>
+                <li><a href="https://www.euronews.com/business/2024/10/09/germanys-economic-struggles-deepen-a-back-to-back-recession-looms" class="src" target="_blank">"Sick man of Europe" returns</a></li>
+                <li>Energy crisis post-Russia sanctions</li>
+                <li>Manufacturing PMI: <a href="https://en.wikipedia.org/wiki/German_economic_crisis_(2022–present)" class="src" target="_blank">26 months of contraction</a></li>
+                <li>Energy-intensive output: <span class="highlight-red">-17%</span> since 2022</li>
+            </ul>
+        </div>
+        <div class="country-box" style="border: 1px solid var(--accent-gold);">
+            <h3>🇨🇿 Czechia</h3>
+            <ul>
+                <li>GDP 2024: <a href="https://csu.gov.cz/docs/107508/505c904d-2398-beea-2c83-cc8def36214c/32019424q4a.pdf" target="_blank" class="src"><span class="highlight">1.0%</span></a></li>
+                <li>GDP 2023: <span class="highlight-red">-0.1%</span></li>
+                <li><a href="https://tradingeconomics.com/czech-republic/exports/germany" class="src" target="_blank">32% of exports → Germany</a></li>
+                <li>Auto = 10% of GDP (German supply chain)</li>
+                <li>Industry: <span class="highlight">~30% of GDP</span> (highest EU)</li>
+                <li>Population: 10.9 million</li>
+            </ul>
+        </div>
+        <div class="country-box">
+            <h3>🇵🇱 Poland</h3>
+            <ul>
+                <li>GDP 2024: <a href="https://notesfrompoland.com/2025/01/30/polands-gdp-grew-by-2-9-in-2024-beating-forecasts/" target="_blank" class="src"><span class="highlight-green">2.9%</span></a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Economy_of_Poland" class="src" target="_blank">No recession since 1992</a></li>
+                <li>Population: <span class="highlight">37.4 million</span> (3.4x CZ)</li>
+                <li>Larger domestic market = resilience</li>
+                <li>More diversified economy</li>
+                <li>Lower auto dependency</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="industry-highlight">
+        <h3>Why Is Germany Struggling?</h3>
+        <p>According to <a href="https://en.wikipedia.org/wiki/German_economic_crisis_(2022–present)" class="src" target="_blank">economists</a>, Germany's crisis stems from:</p>
+        <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-top: 0.5rem;">
+            <li><strong>Energy shock:</strong> Loss of cheap Russian gas after 2022 sanctions; prices remain above pre-crisis levels</li>
+            <li><strong>Industrial decline:</strong> Energy-intensive industries (chemicals, steel) down 17%+ since 2022; BASF cut 2,600 jobs</li>
+            <li><strong>China slowdown:</strong> Less demand for German machinery and autos</li>
+            <li><strong>Structural issues:</strong> Decarbonization costs, aging workforce, overregulation</li>
+            <li><strong>Bankruptcies:</strong> Up 23.5% in 2023 to 18,100 cases</li>
+        </ul>
+        <p style="margin-top: 1rem; margin-bottom: 0;"><strong>Impact on Czechia:</strong> The <a href="https://www.mfcr.cz/en/fiscal-policy/macroeconomic-analysis/macroeconomic-forecast/2024/macroeconomic-forecast-november-2024-57613" class="src" target="_blank">Czech Ministry of Finance</a> explicitly lists "structural problems and weak economic growth in Germany" as a downside risk to Czech forecasts.</p>
+    </div>
+
+    <div class="industry-highlight" style="margin-top: 1.5rem;">
+        <h3>Czech Structural Challenges</h3>
+        <p>The <a href="https://www.imf.org/en/News/Articles/2024/01/25/pr2426-czech-republic-imf-executive-board-concludes-2023-article-iv-consultation" class="src" target="_blank">IMF (2024)</a> identified these key issues for Czechia:</p>
+        <ul style="color: var(--text-secondary); padding-left: 1.5rem; margin-top: 0.5rem;">
+            <li><strong>Demographics:</strong> Aging population, pension system deficit widening</li>
+            <li><strong>Green transition:</strong> High industrial share means high decarbonization costs</li>
+            <li><strong>Germany dependency:</strong> 32% of exports to one country creates vulnerability</li>
+            <li><strong>Wage gap:</strong> Still ~40% below German wages despite low unemployment</li>
+        </ul>
+    </div>
+</div>
+
+<script>
+window.initChartsSlide10 = function() {
+    createChart('gdpCompareChart', {
+        type: 'line',
+        data: {
+            labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+            datasets: [{
+                label: 'Czechia',
+                data: [5.4, 2.5, 5.2, 3.2, 3.0, -5.5, 3.6, 2.4, -0.1, 1.0],
+                borderColor: ChartColors.gold,
+                tension: 0.3,
+                pointRadius: 4
+            }, {
+                label: 'Poland',
+                data: [3.8, 3.1, 4.9, 5.4, 4.7, -2.0, 6.9, 5.3, 0.2, 2.9],
+                borderColor: ChartColors.green,
+                tension: 0.3,
+                pointRadius: 4
+            }, {
+                label: 'Germany',
+                data: [1.5, 2.2, 2.7, 1.0, 1.1, -3.7, 2.6, 1.8, -0.3, 0.0],
+                borderColor: ChartColors.red,
+                tension: 0.3,
+                pointRadius: 4
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: { legend: { position: 'top' } },
+            scales: {
+                y: { title: { display: true, text: 'GDP Growth %' }, grid: { color: '#1a1a1a' } },
+                x: { grid: { color: '#1a1a1a' } }
+            }
+        }
+    });
+};
+</script>

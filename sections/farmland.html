@@ -1,0 +1,134 @@
+<!-- SLIDE 6: FARMLAND -->
+<div class="slide-content">
+    <div class="section-number">07</div>
+    <div class="section-label">Beyond Hops</div>
+    <h2>What Covers Czech Farmland? <span class="gdp-tag green">1.6% of GDP</span></h2>
+    <p>Czechia has <a href="https://europea.org/agriculture-in-the-czech-republic/" class="src" target="_blank">3.5 million hectares of agricultural land</a> (~45% of country). Of this, <a href="https://csu.gov.cz/kraje-spolecne/crop-production" class="src" target="_blank">71% is arable, 27% permanent grassland</a>, and just 1% is hops/vineyards/orchards. Hops occupy only <span class="highlight">0.14% of farmland</span> but are culturally iconic. Czechia is <a href="https://csu.gov.cz/rychle-informace/harvest-estimates-june-2024" class="src" target="_blank">self-sufficient in cereals</a>; ~1/3 is exported.</p>
+
+    <div class="chart-container">
+        <div class="chart-title">Czech Farmland Composition (% of 3.5M hectares) — <a href="https://csu.gov.cz/kraje-spolecne/crop-production" target="_blank" style="color: var(--accent-gold);">Czech Statistical Office</a></div>
+        <div class="chart-wrapper">
+            <canvas id="farmlandChart"></canvas>
+        </div>
+    </div>
+
+    <div class="map-container">
+        <div class="chart-title">Czech Agricultural Regions — <a href="https://www.britannica.com/place/Hana-Valley" target="_blank" style="color: var(--accent-gold);">Britannica</a>, <a href="https://csu.gov.cz/crop-production" target="_blank" style="color: var(--accent-gold);">ČSÚ</a></div>
+        <svg viewBox="0 0 612.46 350.62" xmlns="http://www.w3.org/2000/svg">
+            <image href="../czech-republic.svg" width="612.46" height="350.62"/>
+
+            <!-- ALL SHAPES FIRST (so text renders on top) -->
+            <!-- South Bohemia -->
+            <ellipse cx="180" cy="260" rx="70" ry="50" fill="#16a34a" opacity="0.3"/>
+            <circle cx="180" cy="260" r="5" fill="#16a34a"/>
+            <!-- Vysočina -->
+            <ellipse cx="317" cy="232" rx="55" ry="40" fill="#16a34a" opacity="0.3"/>
+            <circle cx="317" cy="232" r="5" fill="#16a34a"/>
+            <!-- Polabí -->
+            <ellipse cx="300" cy="125" rx="50" ry="28" fill="#c9a227" opacity="0.35"/>
+            <circle cx="300" cy="125" r="5" fill="#c9a227"/>
+            <!-- Haná -->
+            <ellipse cx="467" cy="205" rx="30" ry="22" fill="#c9a227" opacity="0.35"/>
+            <circle cx="467" cy="205" r="5" fill="#c9a227"/>
+            <!-- Wine region -->
+            <ellipse cx="400" cy="315" rx="40" ry="15" fill="#7c3aed" opacity="0.5"/>
+            <circle cx="400" cy="315" r="4" fill="#7c3aed"/>
+            <!-- Hops region -->
+            <ellipse cx="132" cy="102" rx="12" ry="8" fill="#b8342e" opacity="0.5"/>
+            <circle cx="132" cy="102" r="3" fill="#b8342e"/>
+            <!-- Prague marker -->
+            <circle cx="212" cy="137" r="4" fill="#555"/>
+            <!-- Olomouc marker -->
+            <circle cx="467" cy="205" r="4" fill="#555"/>
+
+            <!-- ALL TEXT LAST (renders on top of shapes) -->
+            <text x="180" y="225" fill="#16a34a" font-size="10" text-anchor="middle" font-weight="bold">S. Bohemia</text>
+            <text x="180" y="310" fill="#16a34a" font-size="8" text-anchor="middle">Potatoes, fish ponds</text>
+            <text x="317" y="200" fill="#16a34a" font-size="10" text-anchor="middle" font-weight="bold">Vysočina</text>
+            <text x="317" y="280" fill="#16a34a" font-size="8" text-anchor="middle">Potatoes, fodder</text>
+            <text x="300" y="95" fill="#c9a227" font-size="10" text-anchor="middle" font-weight="bold">Polabí</text>
+            <text x="300" y="163" fill="#c9a227" font-size="8" text-anchor="middle">Wheat, sugar beet</text>
+            <text x="467" y="182" fill="#c9a227" font-size="10" text-anchor="middle" font-weight="bold">Haná</text>
+            <text x="467" y="238" fill="#c9a227" font-size="8" text-anchor="middle">Wheat, barley, maize</text>
+            <text x="445" y="318" fill="#7c3aed" font-size="10" font-weight="bold">Wine</text>
+            <text x="157" y="105" fill="#b8342e" font-size="10" font-weight="bold">Saaz Hops</text>
+            <text x="212" y="127" fill="#fff" font-size="9" text-anchor="middle" font-weight="bold">Prague</text>
+            <text x="467" y="195" fill="#fff" font-size="9" text-anchor="middle">Olomouc</text>
+        </svg>
+        <div class="map-legend">
+            <div class="legend-item"><div class="legend-dot" style="background: #c9a227;"></div>Fertile lowlands — cereals, rapeseed (<a href="https://www.britannica.com/place/Hana-Valley" target="_blank" class="src">Britannica</a>)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #16a34a;"></div>Highlands — potatoes, fodder (<a href="https://www.potatopro.com/czech-republic/potato-statistics" target="_blank" class="src">PotatoPro</a>)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #7c3aed;"></div>Wine region (<a href="https://www.vinarskecentrum.cz/en/o-vine/vinarske-regiony-v-cr" target="_blank" class="src">Vinařské centrum</a>)</div>
+            <div class="legend-item"><div class="legend-dot" style="background: #b8342e;"></div>Hops</div>
+        </div>
+    </div>
+
+    <div class="data-grid">
+        <div class="data-card">
+            <h4>Major Crops (2024 Harvest)</h4>
+            <ul style="color: var(--text-secondary); padding-left: 1.5rem; font-size: 0.9rem;">
+                <li><strong>Winter wheat</strong> — 710K ha, 4.5M tonnes (-11.9% YoY)</li>
+                <li><strong>Spring barley</strong> — 216K ha, 980K tonnes (+3.1%)</li>
+                <li><strong>Winter barley</strong> — 683K tonnes (-16.0%)</li>
+                <li><strong>Rapeseed</strong> — 343K ha, 1.05M tonnes (-20.2%)</li>
+                <li><strong>Fodder crops</strong> — 224K ha (+2.0%)</li>
+            </ul>
+            <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.5rem;">Source: <a href="https://csu.gov.cz/rychle-informace/harvest-estimates-june-2024" target="_blank" class="src">ČSÚ June 2024</a></p>
+        </div>
+        <div class="data-card">
+            <h4>Agricultural Context</h4>
+            <ul style="color: var(--text-secondary); padding-left: 1.5rem; font-size: 0.9rem;">
+                <li><a href="https://csu.gov.cz/rychle-informace/harvest-estimates-june-2024" target="_blank" class="src">Self-sufficient in cereals</a>; ~1/3 exported</li>
+                <li>Agriculture = <a href="https://www.statista.com/statistics/369830/share-of-economic-sectors-in-the-gdp-czechia/" target="_blank" class="src">1.6% of GDP</a> (2023)</li>
+                <li>~2.5% of workforce in agriculture</li>
+                <li>50% of farmland in "less favorable" areas (LFA)</li>
+                <li>Plant production dominates over animal production</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+window.initChartsSlide6 = function() {
+    const canvas = document.getElementById('farmlandChart');
+    if (!canvas) return;
+
+    // Destroy existing chart
+    if (window.ChartRegistry) ChartRegistry.destroy('farmlandChart');
+
+    const chart = new Chart(canvas, {
+        type: 'doughnut',
+        data: {
+            labels: ['Cereals', 'Grassland', 'Oilseeds', 'Fodder', 'Vegetables', 'Hops/Wine'],
+            datasets: [{
+                data: [45, 27, 14, 9, 4, 1],
+                backgroundColor: [ChartColors.gold, ChartColors.green, ChartColors.blue, ChartColors.purple, ChartColors.gray, ChartColors.red],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false
+                },
+                datalabels: {
+                    display: true,
+                    color: '#fff',
+                    font: { weight: 'bold', size: 11 },
+                    formatter: function(value, ctx) {
+                        if (value < 4) return '';
+                        const label = ctx.chart.data.labels[ctx.dataIndex];
+                        return label + '\n' + value + '%';
+                    },
+                    textAlign: 'center'
+                }
+            }
+        },
+        plugins: [ChartDataLabels]
+    });
+
+    if (window.ChartRegistry) ChartRegistry.register('farmlandChart', chart);
+};
+</script>
