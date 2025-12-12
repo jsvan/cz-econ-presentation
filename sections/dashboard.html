@@ -232,7 +232,29 @@
         </div>
     </div>
 
-    
+    <div class="chart-container">
+        <div class="chart-title">Růst GDP (%) — <a href="https://data.worldbank.org/indicator/NY.GDP.MKTP.CD?locations=DE-PL-CZ" target="_blank" style="color: var(--accent-gold);">World Bank</a></div>
+        <div class="chart-wrapper">
+            <canvas id="gdpGrowthChart"></canvas>
+        </div>
+    </div>
+
+    <div style="display: flex; gap: 1rem;">
+        <div class="chart-container" style="flex: 1;">
+            <div class="chart-title">Export jako % GDP Česka (2024) — <a href="https://www.worldstopexports.com/czech-republics-top-import-partners/" target="_blank" style="color: var(--accent-gold);">World's Top Exports</a></div>
+            <div class="chart-wrapper">
+                <canvas id="czechExportDestChart"></canvas>
+            </div>
+        </div>
+        <div class="chart-container" style="flex: 1;">
+            <div class="chart-title">Export jako % GDP Polska (2024) — <a href="https://www.worldstopexports.com/polands-top-import-partners/" target="_blank" style="color: var(--accent-gold);">World's Top Exports</a></div>
+            <div class="chart-wrapper">
+                <canvas id="polandExportDestChart"></canvas>
+            </div>
+        </div>
+    </div>
+
+
 </div>
 
 <script>
@@ -329,6 +351,118 @@ window.initChartsSlide8 = function() {
             plugins: { legend: { display: false } },
             scales: {
                 x: { grid: { color: '#1a1a1a' }, type: 'logarithmic', min: 0.1, max: 100 },
+                y: { grid: { display: false } }
+            }
+        }
+    });
+
+    // GDP Growth comparison: Czechia, Poland, Germany (2015-2024) - percentage
+    createChart('gdpGrowthChart', {
+        type: 'line',
+        data: {
+            labels: ['2015', '2016', '2017', '2018', '2019', '2020', '2021', '2022', '2023', '2024'],
+            datasets: [{
+                label: 'Německo',
+                data: [1.5, 2.2, 2.7, 1.0, 1.1, -3.7, 2.6, 1.8, -0.3, 0.0],
+                borderColor: ChartColors.gold,
+                backgroundColor: 'transparent',
+                tension: 0.3,
+                pointRadius: 4,
+                pointBackgroundColor: ChartColors.gold,
+                borderWidth: 2
+            }, {
+                label: 'Polsko',
+                data: [3.8, 3.1, 4.9, 5.4, 4.7, -2.0, 6.9, 5.3, 0.2, 2.9],
+                borderColor: '#c75050',
+                backgroundColor: 'transparent',
+                tension: 0.3,
+                pointRadius: 4,
+                pointBackgroundColor: '#c75050',
+                borderWidth: 2
+            }, {
+                label: 'Česko',
+                data: [5.4, 2.5, 5.2, 3.2, 3.0, -5.5, 3.6, 2.4, -0.1, 1.0],
+                borderColor: ChartColors.blue,
+                backgroundColor: 'transparent',
+                tension: 0.3,
+                pointRadius: 4,
+                pointBackgroundColor: ChartColors.blue,
+                borderWidth: 3
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: true,
+                    position: 'top',
+                    labels: { color: '#888', usePointStyle: true, padding: 20 }
+                }
+            },
+            scales: {
+                y: {
+                    title: { display: true, text: 'Růst %', color: '#888' },
+                    grid: { color: '#1a1a1a' }
+                },
+                x: { grid: { color: '#1a1a1a' } }
+            }
+        }
+    });
+
+    // Czech export destinations as % of GDP (2024)
+    // GDP $345B: Germany $84B=24.3%, Slovakia $19.8B=5.7%, Poland $18.4B=5.3%, France $12.4B=3.6%, UK $10.9B=3.2%
+    createChart('czechExportDestChart', {
+        type: 'bar',
+        data: {
+            labels: ['Německo', 'Slovensko', 'Polsko', 'Francie', 'UK'],
+            datasets: [{
+                label: '% GDP',
+                data: [24.3, 5.7, 5.3, 3.6, 3.2],
+                backgroundColor: [ChartColors.gold, ChartColors.gray, '#c75050', ChartColors.gray, ChartColors.gray],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: {
+                x: {
+                    grid: { color: '#1a1a1a' },
+                    title: { display: true, text: '% GDP', color: '#888' },
+                    max: 30
+                },
+                y: { grid: { display: false } }
+            }
+        }
+    });
+
+    // Poland export destinations as % of GDP (2024)
+    // GDP $915B: Germany $102.9B=11.2%, Czech $23.2B=2.5%, France $23.1B=2.5%, UK $20.1B=2.2%, Netherlands $17.6B=1.9%
+    createChart('polandExportDestChart', {
+        type: 'bar',
+        data: {
+            labels: ['Německo', 'Česko', 'Francie', 'UK', 'Nizozemsko'],
+            datasets: [{
+                label: '% GDP',
+                data: [11.2, 2.5, 2.5, 2.2, 1.9],
+                backgroundColor: [ChartColors.gold, ChartColors.blue, ChartColors.gray, ChartColors.gray, ChartColors.gray],
+                borderWidth: 0
+            }]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            indexAxis: 'y',
+            plugins: { legend: { display: false } },
+            scales: {
+                x: {
+                    grid: { color: '#1a1a1a' },
+                    title: { display: true, text: '% GDP', color: '#888' },
+                    max: 30
+                },
                 y: { grid: { display: false } }
             }
         }
