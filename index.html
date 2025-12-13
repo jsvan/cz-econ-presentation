@@ -32,23 +32,47 @@
     <!-- Load sections -->
     <script>
     (function() {
-        // Section files in order
-        const sections = [
-            'sections/hero.html',
-            'sections/beer.html',
-            'sections/farmland.html',
-            'sections/mining.html',
-            'sections/automotive.html',
-            // 'sections/big-picture.html',
-            'sections/high-tech.html',
-            'sections/energy.html',
-            // 'sections/hops.html',
-            // 'sections/glass.html',
-            //'sections/regional.html',
-            // 'sections/perspectives.html',
-            'sections/dashboard.html',
-            //'sections/footer.html'
+        // Language configuration
+        const LANG_PATHS = {
+            'cz': 'sections/',
+            'en': 'sections copy/'
+        };
+
+        // Get current language from URL param, then localStorage, default to Czech
+        function getCurrentLang() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const urlLang = urlParams.get('lang');
+            if (urlLang && LANG_PATHS[urlLang]) {
+                return urlLang;
+            }
+            return localStorage.getItem('presentationLang') || 'cz';
+        }
+
+        // Set current language in both URL and localStorage
+        function setCurrentLang(lang) {
+            localStorage.setItem('presentationLang', lang);
+            const url = new URL(window.location);
+            url.searchParams.set('lang', lang);
+            window.history.replaceState({}, '', url);
+        }
+
+        // Section files in order (without path prefix)
+        const sectionFiles = [
+            'hero.html',
+            'beer.html',
+            'farmland.html',
+            'mining.html',
+            'automotive.html',
+            'high-tech.html',
+            'energy.html',
+            'dashboard.html',
         ];
+
+        // Get sections array for current language
+        function getSections() {
+            const langPath = LANG_PATHS[getCurrentLang()];
+            return sectionFiles.map(file => langPath + file);
+        }
 
         // Store init functions mapped to actual slide indices
         window.slideInitFunctions = {};
@@ -56,6 +80,8 @@
         // Create slide divs dynamically
         function createSlides() {
             const container = document.getElementById('slideshow-container');
+            container.innerHTML = ''; // Clear existing slides
+            const sections = getSections();
             sections.forEach((_, index) => {
                 const slide = document.createElement('div');
                 slide.className = 'slide' + (index === 0 ? ' active' : '');
@@ -63,11 +89,18 @@
                 container.appendChild(slide);
             });
             // Update counter total
-            document.querySelector('.slide-counter .total').textContent = sections.length;
+            const totalEl = document.querySelector('.slide-counter .total');
+            if (totalEl) {
+                totalEl.textContent = sections.length;
+            }
         }
 
         // Load all sections sequentially to properly capture init functions
         async function loadSections() {
+            const sections = getSections();
+            // Clear existing init functions
+            window.slideInitFunctions = {};
+
             for (let index = 0; index < sections.length; index++) {
                 const url = sections[index];
                 try {
@@ -113,7 +146,35 @@
                     }
                 }
             }
-            console.log('All sections loaded');
+            console.log('All sections loaded for language:', getCurrentLang());
+
+            // Setup language switcher after loading
+            setupLanguageSwitcher();
+        }
+
+        // Setup language switcher buttons
+        function setupLanguageSwitcher() {
+            const langButtons = document.querySelectorAll('.lang-btn');
+            const currentLang = getCurrentLang();
+
+            langButtons.forEach(btn => {
+                const btnLang = btn.getAttribute('data-lang');
+
+                // Update active state
+                btn.classList.toggle('active', btnLang === currentLang);
+
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    const newLang = btn.getAttribute('data-lang');
+
+                    if (newLang !== getCurrentLang()) {
+                        setCurrentLang(newLang);
+                        // Reload the page to cleanly switch languages
+                        window.location.reload();
+                    }
+                });
+            });
         }
 
         // Initialize everything after DOM is ready

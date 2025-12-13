@@ -292,12 +292,13 @@ window.initChartsSlide5 = function() {
     });
 
     // Where beer is bought pie chart
+    // Statista 2025: At-home $1.86bn (55%), Out-of-home $1.50bn (45%)
     createChart('beerPurchaseChart', {
         type: 'pie',
         data: {
             labels: ['Obchody', 'Hospody'],
             datasets: [{
-                data: [75, 25],
+                data: [55, 45],
                 backgroundColor: [ChartColors.green, '#065f46'],
                 borderColor: '#0a0a0a',
                 borderWidth: 2

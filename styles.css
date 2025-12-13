@@ -276,6 +276,48 @@ a.src:hover {
 
 .nav-hint::after { content: '→'; font-size: 1.5rem; color: var(--accent-gold); }
 
+/* ======================= */
+/* LANGUAGE SWITCHER       */
+/* ======================= */
+
+.language-switcher {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    display: flex;
+    gap: 0.5rem;
+    z-index: 100;
+    opacity: 0;
+    animation: fadeInUp 0.8s ease 0.8s forwards;
+}
+
+.lang-btn {
+    background: rgba(10, 10, 10, 0.7);
+    border: 1px solid var(--border-color);
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lang-btn:hover {
+    background: rgba(42, 42, 42, 0.9);
+    border-color: var(--text-muted);
+}
+
+.lang-btn.active {
+    background: var(--accent-gold);
+    border-color: var(--accent-gold);
+}
+
+.lang-btn .flag-icon {
+    font-size: 1.5rem;
+    line-height: 1;
+}
+
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
